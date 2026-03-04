@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Users/shiningmoon/Documents/SecretScaling/CSS/Styles.css:*)",
+      "WebSearch"
+    ]
+  }
+}
