@@ -1,17 +1,4 @@
 // ============================
-// CURSOR GLOW FOLLOWER
-// ============================
-
-const cursorGlow = document.getElementById('cursorGlow');
-
-if (cursorGlow) {
-    document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = e.clientX + 'px';
-        cursorGlow.style.top  = e.clientY + 'px';
-    }, { passive: true });
-}
-
-// ============================
 // HERO TYPEWRITER EFFECT
 // ============================
 
@@ -24,7 +11,7 @@ if (rotatingText) {
             'een voorspelbare instroom van klanten te creëren',
             'meer vertrouwen op te bouwen bij potentiële klanten',
             'meer consultaties om te zetten in behandelingen',
-            'duurzaam en gecontroleerd te groeien',
+            'schalen en gecontroleerd te groeien',
         ],
         en: [
             'attract more high-quality consultations',
@@ -35,50 +22,58 @@ if (rotatingText) {
         ]
     };
 
-    // Detect active language from cookie
-    var langMatch = document.cookie.match(/googtrans=\/nl\/(\w+)/);
-    var activeLang = (langMatch && langMatch[1] === 'en') ? 'en' : 'nl';
-    const phrases = phraseSets[activeLang];
+    const TYPE_SPEED    = 72;
+    const DELETE_SPEED  = 38;
+    const PAUSE_TYPED   = 2000;
+    const PAUSE_DELETED = 380;
 
-    const TYPE_SPEED    = 72;   // ms per character while typing
-    const DELETE_SPEED  = 38;   // ms per character while deleting
-    const PAUSE_TYPED   = 2000; // ms to pause after fully typed
-    const PAUSE_DELETED = 380;  // ms to pause before typing next phrase
-
-    let phraseIndex = 0;
-    let charIndex   = phrases[0].length; // page already shows full first phrase
-    let isDeleting  = true;              // start by deleting after initial pause
+    var activeLang   = 'nl';
+    var activePhrases = phraseSets['nl'];
+    var phraseIndex  = 0;
+    var charIndex    = phraseSets['nl'][0].length;
+    var isDeleting   = true;
+    var tickTimeout  = null;
 
     function tick() {
-        const phrase = phrases[phraseIndex];
+        var phrase = activePhrases[phraseIndex];
 
         if (isDeleting) {
             charIndex--;
             rotatingText.textContent = phrase.substring(0, charIndex);
-
             if (charIndex === 0) {
                 isDeleting  = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                setTimeout(tick, PAUSE_DELETED);
+                phraseIndex = (phraseIndex + 1) % activePhrases.length;
+                tickTimeout = setTimeout(tick, PAUSE_DELETED);
                 return;
             }
-            setTimeout(tick, DELETE_SPEED);
-
+            tickTimeout = setTimeout(tick, DELETE_SPEED);
         } else {
             charIndex++;
-            rotatingText.textContent = phrases[phraseIndex].substring(0, charIndex);
-
-            if (charIndex === phrases[phraseIndex].length) {
-                isDeleting = true;
-                setTimeout(tick, PAUSE_TYPED);
+            rotatingText.textContent = activePhrases[phraseIndex].substring(0, charIndex);
+            if (charIndex === activePhrases[phraseIndex].length) {
+                isDeleting  = true;
+                tickTimeout = setTimeout(tick, PAUSE_TYPED);
                 return;
             }
-            setTimeout(tick, TYPE_SPEED);
+            tickTimeout = setTimeout(tick, TYPE_SPEED);
         }
     }
 
-    // Wait before deleting the first phrase
-    setTimeout(tick, PAUSE_TYPED);
+    // Expose language switcher for inline switchLang() calls
+    window.setTypewriterLang = function (lang) {
+        activeLang    = lang;
+        activePhrases = phraseSets[lang] || phraseSets['nl'];
+        clearTimeout(tickTimeout);
+        phraseIndex = 0;
+        charIndex   = 0;
+        isDeleting  = false;
+        rotatingText.textContent = '';
+        // Short delay lets Google Translate finish its DOM changes first
+        tickTimeout = setTimeout(tick, 150);
+    };
+
+    // Start
+    tickTimeout = setTimeout(tick, PAUSE_TYPED);
 
 
 }
@@ -154,28 +149,8 @@ if (servicesWords.length > 0) {
 }
 
 // ============================
-// TOP NAV — HIDE ON SCROLL DOWN, SHOW ON SCROLL UP
 // ============================
-
 const nav = document.getElementById('nav');
-let lastNavScrollY = window.scrollY;
-const NAV_DELTA_THRESHOLD = 6;
-
-function updateNavState() {
-    const scrollY = window.scrollY;
-    const delta   = scrollY - lastNavScrollY;
-
-    if (Math.abs(delta) < NAV_DELTA_THRESHOLD) return;
-
-    if (delta > 0) {
-        nav.classList.add('nav--hidden');
-    } else {
-        nav.classList.remove('nav--hidden');
-    }
-    lastNavScrollY = scrollY;
-}
-
-window.addEventListener('scroll', updateNavState, { passive: true });
 
 // ============================
 // DROPUP MENU (MORE BUTTON)
@@ -189,7 +164,6 @@ function openDropup() {
     dropupMenu.classList.add('active');
     dropupOverlay.classList.add('active');
     dropupMenu.setAttribute('aria-hidden', 'false');
-    nav.classList.remove('nav--hidden');
 }
 
 function closeDropup() {

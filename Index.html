@@ -12,11 +12,7 @@
     <style>
         /* ── Language Switcher ── */
         #lang-switcher {
-            position: fixed;
-            top: 16px;
-            right: 20px;
-            z-index: 10000;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             background: rgba(17, 29, 53, 0.85);
             backdrop-filter: blur(10px);
@@ -25,6 +21,7 @@
             padding: 4px;
             gap: 2px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 24px;
         }
         .lang-btn {
             background: transparent;
@@ -51,23 +48,10 @@
         .goog-te-banner-frame,
         .skiptranslate { display: none !important; }
         body { top: 0 !important; }
-
-        @media (max-width: 768px) {
-            #lang-switcher {
-                top: auto;
-                bottom: 90px;
-                right: 16px;
-            }
-        }
     </style>
 </head>
 <body class="intro-active">
 
-    <!-- ========== LANGUAGE SWITCHER ========== -->
-    <div id="lang-switcher" class="notranslate">
-        <button class="lang-btn active" id="btn-nl" onclick="switchLang('nl')">NL</button>
-        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
-    </div>
     <div id="google_translate_element" style="position:absolute;visibility:hidden;width:0;height:0;overflow:hidden;"></div>
 
     <!-- ========== LOADING SCREEN ========== -->
@@ -147,11 +131,16 @@
             <div class="hero-logo">
                 <img src="Images/Logo/SecretScaling_Logo-removebg-preview.png" alt="SecretScaling" class="hero-logo-img">
             </div>
+            <!-- ========== LANGUAGE SWITCHER ========== -->
+            <div id="lang-switcher" class="notranslate">
+                <button class="lang-btn active" id="btn-nl" onclick="switchLang('nl')">NL</button>
+                <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+            </div>
             <h1 class="hero-title">
                 <span class="hero-title-prefix">Een groeisysteem voor klinieken dat helpt om</span>
-                <span class="hero-rotating-text notranslate">meer hoogwaardige consultaties aan te trekken</span>
+                <span class="hero-rotating-text notranslate" translate="no">schalen en gecontroleerd te groeien</span>
             </h1>
-            <p class="hero-subtitle">Wij gebruiken AI-systemen voor uw klantenwerving, merkpositionering en leadstroom — zodat u zich kunt richten op het behandelen van patiënten, niet op het achternajagen ervan.</p>
+            <p class="hero-subtitle">Een voorspelbare instroom van nieuwe patiënten voor uw kliniek. Wij bouwen de systemen die online aandacht omzetten in consultaties.</p>
             <div class="hero-ctas">
                 <a href="#contact" class="btn btn--orange">Vraag een Offerte</a>
                 <a href="#contact" class="btn btn--ghost">Plan een Gesprek</a>
@@ -192,7 +181,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
                         <h3 class="service-card-name">KLANTENWERVING</h3>
-                        <p class="service-card-desc">Wij bouwen een voorspelbare consultatiepijplijn met gerichte Meta-advertenties, aanbodpositionering en leadgeneratiecampagnes.</p>
+                        <p class="service-card-desc">De manier waarop klanten jouw kliniek ervaren begint lang vóór het eerste consult. Door alle contactmomenten binnen de klantreis strategisch te verbeteren, zorgen we voor een sterkere eerste indruk, meer vertrouwen en een stabielere instroom van kwalitatieve consultaties.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">META ADVERTENTIES</span>
                             <span class="service-tag">LEADGENERATIE</span>
@@ -203,7 +192,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-star"></i></div>
                         <h3 class="service-card-name">MERKPOSITIONERING</h3>
-                        <p class="service-card-desc">Wij herpositioneren uw kliniek als de vertrouwde autoriteit in uw regio — zodat u hoogbetalende klanten aantrekt, geen prijskopers.</p>
+                        <p class="service-card-desc">Een sterke merkpositionering zorgt ervoor dat jouw kliniek niet alleen zichtbaar is, maar ook onthouden wordt. Door jouw unieke waarde duidelijker te positioneren, creëren we een consistente en geloofwaardige indruk die vertrouwen opbouwt en de juiste doelgroep aantrekt.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">MERKSTRATEGIE</span>
                             <span class="service-tag">AUTORITEITSOPBOUW</span>
@@ -214,7 +203,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-camera"></i></div>
                         <h3 class="service-card-name">SOCIAL MEDIA &amp; CONTENT</h3>
-                        <p class="service-card-desc">Done-for-you Instagram contentstrategie, postsysteem en autoritair-gedreven content die volgers omzet in boekingen.</p>
+                        <p class="service-card-desc">Door strategische content te creëren die past bij de identiteit van jouw kliniek, vergroten we niet alleen de zichtbaarheid, maar bouwen we ook vertrouwen en geloofwaardigheid op — waardoor social media een natuurlijke brug wordt tussen interesse en consultatie.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">INSTAGRAM CONTENT</span>
                             <span class="service-tag">CONTENTSTRATEGIE</span>
@@ -224,8 +213,8 @@
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h3 class="service-card-name">WEB DESIGN</h3>
-                        <p class="service-card-desc">Wij ontwerpen en implementeren conversiegerichte klinieksites die bezoekers stap voor stap naar een consultatieafspraak leiden.</p>
+                        <h3 class="service-card-name">WEB DESIGN &amp; SEO</h3>
+                        <p class="service-card-desc">Jouw website vormt het fundament van de online klantreis. We ontwikkelen een snelle, veilige en strategisch opgebouwde website die de merkidentiteit versterkt, de gebruikerservaring verbetert en via SEO zorgt voor langdurige online zichtbaarheid en groei.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">SINGLE SCROLL SITE</span>
                             <span class="service-tag">LANDINGSPAGINA</span>
@@ -242,7 +231,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-comments"></i></div>
                         <h3 class="service-card-name">LEADOPVOLGING</h3>
-                        <p class="service-card-desc">DM-responsraamwerken, leadkwalificatiescripts en follow-upflows zodat geen enkele aanvraag verloren gaat.</p>
+                        <p class="service-card-desc">Veel groei gaat verloren in de fase tussen interesse en beslissing. Door het opvolgproces strategisch te optimaliseren zorgen we dat leads niet verwateren, sneller converteren en met meer vertrouwen kiezen voor jouw kliniek.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">DM SCRIPTS</span>
                             <span class="service-tag">LEAD KWALIFICATIE</span>
@@ -253,7 +242,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-rectangle-ad"></i></div>
                         <h3 class="service-card-name">META ADVERTENTIES</h3>
-                        <p class="service-card-desc">Volledige Meta-advertentie-opzet, pixeltracking, creatieve richting en doorlopende optimalisatie — wij regelen alles.</p>
+                        <p class="service-card-desc">We zetten Meta advertenties strategisch in om een voorspelbare en stabiele instroom van consultaties te creëren. Door data-gedreven optimalisatie zorgen we voor gecontroleerde groei zonder onnodige verspilling.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">CAMPAGNE OPZET</span>
                             <span class="service-tag">PIXEL TRACKING</span>
@@ -264,7 +253,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
                         <h3 class="service-card-name">GROEI &amp; ANALYSE</h3>
-                        <p class="service-card-desc">Maandelijkse strategiegesprekken, prestatietracking en groeiroadmap zodat u altijd weet wat werkt.</p>
+                        <p class="service-card-desc">We optimaliseren elke stap van de klantreis — van eerste zichtbaarheid tot consultatie en opvolging — zodat jouw kliniek structureel meer kwalitatieve klanten aantrekt en duurzaam groeit.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">MAANDRAPPORTAGE</span>
                             <span class="service-tag">STRATEGIE CALLS</span>
@@ -275,7 +264,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-square-poll-vertical"></i></div>
                         <h3 class="service-card-name">RAPPORTAGE</h3>
-                        <p class="service-card-desc">Heldere maandelijkse rapporten met campagneresultaten, bereik, conversies en concrete aanbevelingen — zodat u altijd inzicht heeft in uw ROI.</p>
+                        <p class="service-card-desc">Met duidelijke maandelijkse rapporten krijg je volledig inzicht in de prestaties van jouw marketing: campagneresultaten, websiteverkeer, consultatie-aanvragen en groei-inzichten. Zo werken we niet alleen als uitvoerder, maar als strategische partner in jouw groei.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">MAANDELIJKS RAPPORT</span>
                             <span class="service-tag">ROI INZICHT</span>
@@ -292,8 +281,8 @@
     <section class="transformations" id="transformations">
         <div class="container">
             <div class="section-header" data-reveal>
-                <h2>De <span>3 Transformaties</span> Die Wij Leveren</h2>
-                <p>Elke kliniek die met ons werkt doorloopt dezelfde bewezen reis — van onvoorspelbaar naar onstopbaar.</p>
+                <h2>De <span>3 Groeiresultaten</span> Die Wij Realiseren</h2>
+                <p>Wij helpen jouw kliniek in iedere fase om de online infrastructuur te optimaliseren — van zichtbaarheid tot een voorspelbare instroom van consultaties.</p>
             </div>
             <div class="transformations-grid" data-reveal>
                 <div class="transformation-card">
@@ -301,11 +290,11 @@
                         <i class="fas fa-rotate"></i>
                     </div>
                     <div class="transformation-arrow">
-                        <span class="transform-from">Onvoorspelbaar</span>
+                        <span class="transform-from">Onregelmatige Instroom</span>
                         <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Voorspelbaar Volgeboekt</span>
+                        <span class="transform-to">Een Consistente Flow aan Klanten</span>
                     </div>
-                    <p>Wij bouwen een gestructureerd klantwervingssysteem zodat elke week consultaties binnenkomen — niet alleen als u geluk heeft.</p>
+                    <p>Van Meta-advertenties tot een conversiegerichte website bouwen wij een gestructureerd systeem dat bezoekers stap voor stap begeleidt naar een consultatie. Zo ontstaat er een stabiele instroom van nieuwe klanten, week na week.</p>
                 </div>
                 <div class="transformation-card transformation-card--featured">
                     <div class="transformation-icon">
@@ -314,9 +303,9 @@
                     <div class="transformation-arrow">
                         <span class="transform-from">'Gewoon Een Andere Kliniek'</span>
                         <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Lokale Autoriteit</span>
+                        <span class="transform-to">Een Unieke Positie in Uw Regio</span>
                     </div>
-                    <p>Wij positioneren uw kliniek als de vertrouwde premiumkeuze in uw regio zodat klanten voor u kiezen zonder prijzen te vergelijken.</p>
+                    <p>Wij positioneren jouw kliniek als de premium keuze in jouw regio. Door een sterke merkpositionering, duidelijke communicatie en een professionele online uitstraling kiezen klanten bewust voor jouw kliniek — zonder eerst prijzen te vergelijken.</p>
                 </div>
                 <div class="transformation-card">
                     <div class="transformation-icon">
@@ -325,9 +314,9 @@
                     <div class="transformation-arrow">
                         <span class="transform-from">Chaotische Groei</span>
                         <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Gecontroleerde Schaal</span>
+                        <span class="transform-to">Schalen Zonder Overweldiging</span>
                     </div>
-                    <p>Wij bouwen de systemen, workflows en leadafhandelingsprocessen zodat groei geen overweldiging veroorzaakt.</p>
+                    <p>Met slimme systemen, duidelijke workflows en efficiënte leadopvolging creëren wij een infrastructuur die meegroeit met jouw kliniek. Zo kun je verder groeien zonder dat marketing of klantbeheer onoverzichtelijk wordt.</p>
                 </div>
             </div>
         </div>
@@ -634,6 +623,9 @@
                     <p>Als wij binnen 60 dagen geen gekwalificeerde consultatiekansen genereren, werken wij gratis totdat we dat wel doen.</p>
                 </div>
             </div>
+            <div style="text-align:center; margin-top: 48px;" data-reveal>
+                <a href="#contact" class="btn btn--orange">Plan een Gratis Gesprek</a>
+            </div>
         </div>
     </section>
 
@@ -643,9 +635,8 @@
             <div class="about-grid" data-reveal>
                 <div class="about-text">
                     <h2>Over <span>Ons Bureau</span></h2>
-                    <p>Wij zijn een gespecialiseerd AI-marketingbureau dat uitsluitend voor cosmetische klinieken en med spas is gebouwd. Wij begrijpen uw markt, uw klanten en het exacte AI-systeem dat nodig is om uw consultatiagenda consistent te vullen.</p>
-                    <p>In tegenstelling tot generieke bureaus combineren wij kunstmatige intelligentie met bewezen marketingstrategie — verfijnd specifiek voor esthetische en gezondheidszorgbedrijven — zodat elke kliniek voorspelbare resultaten krijgt, geen giswerk.</p>
-                    <a href="about.html" class="btn btn--orange">Meer Over Ons</a>
+                    <p>Ons doel is helder: bedrijven verbinden met klanten die actief op zoek zijn naar hun expertise en oplossingen.</p>
+                    <p>SecretScaling bouwt digitale groeisystemen voor bedrijven die afhankelijk zijn van een constante instroom van klanten. Wij ontwikkelen een online infrastructuur waarin zichtbaarheid, vertrouwen en klantinstroom samenkomen. Het resultaat is een systeem dat bedrijven helpt om op een voorspelbare en duurzame manier te groeien.</p>
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
@@ -671,13 +662,8 @@
                 </div>
                 <div class="story-text">
                     <h2>Ons <span>Systeem</span></h2>
-                    <p>Het Fully Booked Clinic System is een complete done-for-you marketingmotor. Het combineert klantenwerving, merkautoriteit, leadafhandeling en consultatie-optimalisatie in één naadloos systeem.</p>
-                    <p>Wij nemen in onze foundingfase slechts 10 cosmetische klinieken aan zodat wij nauw met elk kunnen samenwerken. Eén plek is al ingenomen.</p>
-                    <ul class="story-stats">
-                        <li><strong>60 Dagen</strong> Tot Eerste Resultaten</li>
-                        <li><strong>9</strong> Founding Plekken Over</li>
-                        <li><strong>3x</strong> Gem. Consultatiestijging</li>
-                    </ul>
+                    <p>Veel bedrijven investeren in marketing, maar zien geen consistente instroom van klanten. Niet omdat er te weinig aandacht is, maar omdat de stappen tussen zichtbaarheid en klant vaak niet goed op elkaar aansluiten.</p>
+                    <p>Daarom bouwen wij een gestructureerd systeem waarin alles samenwerkt: van zichtbaarheid → website → lead → consultatie → klant. Wij implementeren dit stap voor stap in uw bedrijf en optimaliseren het continu op basis van data en resultaten. Het resultaat is een marketingstructuur die gericht is op een stabiele en voorspelbare instroom van nieuwe klanten.</p>
                 </div>
             </div>
         </div>
@@ -687,8 +673,8 @@
     <section class="showcase" id="showcase">
         <div class="container">
             <div class="section-header" data-reveal>
-                <h2>Ons Systeem Werkt <span>Op Elk Kanaal</span></h2>
-                <p>Van Instagram-advertenties tot boekingsfunnels — wij bouwen een compleet klantwervingssysteem dat consistent werkt op alle platforms.</p>
+                <h2>Ons Systeem Werkt Met De <span>Tools Die U Al Gebruikt</span></h2>
+                <p>Ons systeem kan eenvoudig worden geïntegreerd met de tools die uw bedrijf al gebruikt. Zo versterken wij uw bestaande online infrastructuur zonder dat u volledig opnieuw hoeft te beginnen. Wij werken onder andere met Shopify, WordPress, Google Ads, Google SEO, Meta advertenties en TikTok advertenties.</p>
             </div>
             <div class="devices" data-reveal>
                 <div class="device device--desktop">
@@ -739,47 +725,44 @@
         <section class="news" id="news">
         <div class="container">
             <div class="section-header" data-reveal>
-                <h2>Klant <span>Pijnpunten Die Wij Oplossen</span></h2>
-                <p>Dit zijn de exacte problemen waarmee eigenaren van cosmetische klinieken worden geconfronteerd — en wat wij eraan doen.</p>
+                <h2>Voor <span>Wie Dit Bedoeld Is</span></h2>
+                <p>SecretScaling is gebouwd voor bedrijven die serieus zijn over groei en klaar zijn om structureel meer klanten aan te trekken.</p>
             </div>
             <div class="news-grid" data-reveal>
                 <article class="news-card">
                     <div class="news-image">
                         <div class="image-placeholder small">
-                            <i class="fas fa-image"></i>
+                            <i class="fas fa-users"></i>
                         </div>
                     </div>
                     <div class="news-body">
-                        <span class="news-date"><i class="fas fa-quote-left"></i> Het Probleem</span>
-                        <h3>"Ik weet niet waar mijn volgende klanten vandaan komen."</h3>
-                        <p>De meeste klinieken vertrouwen op mond-tot-mondreclame en hoop. Wij vervangen hoop door een gestructureerd systeem dat uw agenda elke week vult.</p>
-                        <span class="pain-familiar">Herkenbaar?</span>
+                        <span class="news-date"><i class="fas fa-check"></i> Meer Klanten Aantrekken</span>
+                        <h3>Uw marketing moet leiden tot een stabiele instroom van nieuwe klanten.</h3>
+                        <p>Wij bouwen de systemen die online aandacht omzetten in consultaties — week na week, voorspelbaar en gestructureerd.</p>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
                         <div class="image-placeholder small">
-                            <i class="fas fa-image"></i>
+                            <i class="fas fa-star"></i>
                         </div>
                     </div>
                     <div class="news-body">
-                        <span class="news-date"><i class="fas fa-quote-left"></i> Het Probleem</span>
-                        <h3>"Ik heb eerder advertenties geprobeerd en geld verspild."</h3>
-                        <p>Slechte advertenties komen voort uit slechte strategie. Wij gebruiken een bewezen raamwerk met duidelijke targeting, aantrekkelijke aanbiedingen en volledige tracking zodat elke euro verantwoord is.</p>
-                        <span class="pain-familiar">Herkenbaar?</span>
+                        <span class="news-date"><i class="fas fa-check"></i> Sterker Positioneren</span>
+                        <h3>Uw bedrijf moet duidelijk onderscheiden zijn van concurrenten.</h3>
+                        <p>Door jouw unieke waarde strategisch te positioneren zorgen we dat klanten bewust voor jouw kliniek kiezen — niet omdat je de goedkoopste bent.</p>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
                         <div class="image-placeholder small">
-                            <i class="fas fa-image"></i>
+                            <i class="fas fa-arrow-trend-up"></i>
                         </div>
                     </div>
                     <div class="news-body">
-                        <span class="news-date"><i class="fas fa-quote-left"></i> Het Probleem</span>
-                        <h3>"Leads reageren maar boeken nooit een consultatie."</h3>
-                        <p>Vragen zonder boekingen = gebroken follow-up. Wij installeren een complete lead-naar-boeking workflow zodat elke aanvraag wordt vastgelegd, gekwalificeerd en geconverteerd.</p>
-                        <span class="pain-familiar">Herkenbaar?</span>
+                        <span class="news-date"><i class="fas fa-check"></i> Schalen</span>
+                        <h3>Uw marketing moet blijven werken terwijl uw bedrijf groeit.</h3>
+                        <p>Met slimme workflows en efficiënte systemen creëren wij een infrastructuur die meegroeit met uw kliniek, zonder dat het onoverzichtelijk wordt.</p>
                     </div>
                 </article>
             </div>
@@ -1001,7 +984,6 @@
         </div>
     </footer>
 
-    <div class="cursor-glow" id="cursorGlow"></div>
     <script src="JavaScript/Script.js"></script>
     <script>
         (function () {
@@ -1076,13 +1058,31 @@
             document.getElementById('btn-nl').classList.toggle('active', lang === 'nl');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-            // Find the hidden Google Translate select and trigger it
-            var select = document.querySelector('.goog-te-combo');
-            if (select) {
-                select.value = lang === 'nl' ? '' : lang;
-                select.dispatchEvent(new Event('change'));
+            if (lang === 'nl') {
+                // Clear translation cookie and reload — fastest, cleanest reset
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+                location.reload();
+            } else {
+                // Switch typewriter immediately to English
+                if (window.setTypewriterLang) window.setTypewriterLang(lang);
+                // Trigger Google Translate for the rest of the page
+                var select = document.querySelector('.goog-te-combo');
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event('change'));
+                }
             }
         }
+
+        // On load: if EN cookie exists, mark EN button active and switch typewriter
+        (function () {
+            var match = document.cookie.match(/googtrans=\/nl\/(\w+)/);
+            if (match && match[1] === 'en') {
+                document.getElementById('btn-nl').classList.remove('active');
+                document.getElementById('btn-en').classList.add('active');
+            }
+        })();
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
