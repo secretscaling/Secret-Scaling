@@ -9,8 +9,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="CSS/Styles.css">
+    <style>
+        /* ── Language Switcher ── */
+        #lang-switcher {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            background: rgba(17, 29, 53, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(91, 141, 239, 0.25);
+            border-radius: 100px;
+            padding: 4px;
+            gap: 2px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.45);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 6px 14px;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .lang-btn:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .lang-btn.active {
+            background: var(--orange, #E8734A);
+            color: #ffffff;
+            box-shadow: 0 2px 10px rgba(232,115,74,0.4);
+        }
+        /* Hide Google Translate bar */
+        .goog-te-banner-frame,
+        .skiptranslate { display: none !important; }
+        body { top: 0 !important; }
+    </style>
 </head>
 <body class="intro-active">
+
+    <!-- ========== LANGUAGE SWITCHER ========== -->
+    <div id="lang-switcher" class="notranslate">
+        <button class="lang-btn active" id="btn-nl" onclick="switchLang('nl')">NL</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+    </div>
+    <div id="google_translate_element" style="position:absolute;visibility:hidden;width:0;height:0;overflow:hidden;"></div>
 
     <!-- ========== LOADING SCREEN ========== -->
     <div id="loader">
@@ -91,7 +141,7 @@
             </div>
             <h1 class="hero-title">
                 <span class="hero-title-prefix">Een groeisysteem voor klinieken dat helpt om</span>
-                <span class="hero-rotating-text">meer hoogwaardige consultaties aan te trekken</span>
+                <span class="hero-rotating-text notranslate">meer hoogwaardige consultaties aan te trekken</span>
             </h1>
             <p class="hero-subtitle">Wij gebruiken AI-systemen voor uw klantenwerving, merkpositionering en leadstroom — zodat u zich kunt richten op het behandelen van patiënten, niet op het achternajagen ervan.</p>
             <div class="hero-ctas">
@@ -1003,5 +1053,29 @@
       });
     })();
   </script>
+
+    <!-- ========== GOOGLE TRANSLATE ========== -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'nl',
+                includedLanguages: 'en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function switchLang(lang) {
+            document.getElementById('btn-nl').classList.toggle('active', lang === 'nl');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            // Find the hidden Google Translate select and trigger it
+            var select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = lang === 'nl' ? '' : lang;
+                select.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

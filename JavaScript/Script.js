@@ -18,13 +18,27 @@ if (cursorGlow) {
 const rotatingText = document.querySelector('.hero-rotating-text');
 
 if (rotatingText) {
-    const phrases = [
-        'meer hoogwaardige consultaties aan te trekken',
-        'een voorspelbare instroom van klanten te creëren',
-        'meer vertrouwen op te bouwen bij potentiële klanten',
-        'meer consultaties om te zetten in behandelingen',
-        'duurzaam en gecontroleerd te groeien',
-    ];
+    const phraseSets = {
+        nl: [
+            'meer hoogwaardige consultaties aan te trekken',
+            'een voorspelbare instroom van klanten te creëren',
+            'meer vertrouwen op te bouwen bij potentiële klanten',
+            'meer consultaties om te zetten in behandelingen',
+            'duurzaam en gecontroleerd te groeien',
+        ],
+        en: [
+            'attract more high-quality consultations',
+            'create a predictable flow of new clients',
+            'build more trust with potential clients',
+            'convert more consultations into treatments',
+            'grow sustainably and in a controlled way',
+        ]
+    };
+
+    // Detect active language from cookie
+    var langMatch = document.cookie.match(/googtrans=\/nl\/(\w+)/);
+    var activeLang = (langMatch && langMatch[1] === 'en') ? 'en' : 'nl';
+    const phrases = phraseSets[activeLang];
 
     const TYPE_SPEED    = 72;   // ms per character while typing
     const DELETE_SPEED  = 38;   // ms per character while deleting
