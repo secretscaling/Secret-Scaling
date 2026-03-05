@@ -70,33 +70,72 @@ if (rotatingText) {
 }
 
 // ============================
+// HERO SPARKLES
+// ============================
+
+(function () {
+    const section = document.getElementById('hero');
+    if (!section) return;
+
+    const container = document.createElement('div');
+    container.className = 'hero-sparkles';
+    section.prepend(container);
+
+    const COUNT = 60;
+    for (let i = 0; i < COUNT; i++) {
+        const s = document.createElement('span');
+        s.className = 'sparkle';
+        const size  = Math.random() * 3 + 1;
+        const delay = (Math.random() * 9).toFixed(2);
+        const dur   = (Math.random() * 5 + 4).toFixed(2);
+        s.style.cssText = `
+            left:${(Math.random() * 100).toFixed(2)}%;
+            top:${(Math.random() * 100).toFixed(2)}%;
+            width:${size.toFixed(1)}px;
+            height:${size.toFixed(1)}px;
+            animation-delay:${delay}s;
+            animation-duration:${dur}s;
+        `;
+        container.appendChild(s);
+    }
+})();
+
+// ============================
 // SERVICES BIG TEXT ROTATION + RIPPLE
 // ============================
 
 const servicesWords = document.querySelectorAll('.services-headline-word');
-const headlineWrap  = document.querySelector('.services-headline-wrap');
 
-function fireHeadlineRipple() {
-    if (!headlineWrap) return;
-    // Spawn 3 rings with staggered delays
-    for (let i = 0; i < 3; i++) {
-        const ring = document.createElement('span');
-        ring.className = 'headline-ripple';
-        ring.style.animationDelay = (i * 0.22) + 's';
-        headlineWrap.appendChild(ring);
-        ring.addEventListener('animationend', () => ring.remove());
-    }
-}
+// Wrap each character in a span so we can wave them individually
+servicesWords.forEach(word => {
+    const chars = [...word.textContent];
+    word.textContent = '';
+    chars.forEach((ch, i) => {
+        const span = document.createElement('span');
+        span.className = 'wave-char';
+        span.textContent = ch === ' ' ? '\u00A0' : ch;
+        span.style.animationDelay = (i * 0.045) + 's';
+        word.appendChild(span);
+    });
+});
 
 if (servicesWords.length > 0) {
     let currentWord = 0;
-    // Fire ripple on initial load too
-    fireHeadlineRipple();
+
+    function activateWord(index) {
+        // Force animation restart by briefly removing and re-adding active
+        servicesWords[index].classList.remove('active');
+        // eslint-disable-next-line no-unused-expressions
+        servicesWords[index].offsetWidth; // reflow
+        servicesWords[index].classList.add('active');
+    }
+
+    activateWord(0);
+
     setInterval(() => {
         servicesWords[currentWord].classList.remove('active');
         currentWord = (currentWord + 1) % servicesWords.length;
-        servicesWords[currentWord].classList.add('active');
-        fireHeadlineRipple();
+        activateWord(currentWord);
     }, 2500);
 }
 
@@ -447,4 +486,138 @@ if (quickForm) handleFormSubmit(quickForm);
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', function () { setup(); onScroll(); });
+})();
+
+// ============================
+// SERVICES HUB — LINES & BALL
+// ============================
+
+(function () {
+    const grid  = document.querySelector('.services-hub-grid');
+    const hubEl = document.querySelector('.services-hub-center');
+    const cards = Array.from(document.querySelectorAll('.services-hub-grid .service-card'));
+    if (!grid || !hubEl || cards.length === 0) return;
+
+    // Build SVG overlay
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.id = 'hubLinesSvg';
+    grid.prepend(svg);
+
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    defs.innerHTML = `
+        <filter id="hubBallGlow" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2.8" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>`;
+    svg.appendChild(defs);
+
+    // Single reusable ball
+    const ballEl = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    ballEl.setAttribute('r', '3.5');
+    ballEl.setAttribute('fill', '#ffffff');
+    ballEl.setAttribute('filter', 'url(#hubBallGlow)');
+    ballEl.style.display = 'none';
+    svg.appendChild(ballEl);
+
+    let pathEls = [];
+
+    // Returns the point on the card's border facing the hub
+    function edgePoint(rect, gridRect, hubCx, hubCy) {
+        const cx = rect.left - gridRect.left + rect.width  / 2;
+        const cy = rect.top  - gridRect.top  + rect.height / 2;
+        const dx = hubCx - cx;
+        const dy = hubCy - cy;
+        if (dx === 0 && dy === 0) return { x: cx, y: cy };
+        const tx = rect.width  / 2 / Math.abs(dx);
+        const ty = rect.height / 2 / Math.abs(dy);
+        const t  = Math.min(tx, ty);
+        return { x: cx + dx * t, y: cy + dy * t };
+    }
+
+    function buildLines() {
+        svg.querySelectorAll('.hub-line').forEach(el => el.remove());
+        pathEls = [];
+
+        if (window.innerWidth <= 900) return;
+
+        const gridRect = grid.getBoundingClientRect();
+        const hubRect  = hubEl.getBoundingClientRect();
+        const hubCx    = hubRect.left - gridRect.left + hubRect.width  / 2;
+        const hubCy    = hubRect.top  - gridRect.top  + hubRect.height / 2;
+
+        cards.forEach(card => {
+            const r     = card.getBoundingClientRect();
+            const start = edgePoint(r, gridRect, hubCx, hubCy);
+
+            const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            p.setAttribute('class', 'hub-line');
+            p.setAttribute('d', `M ${start.x} ${start.y} L ${hubCx} ${hubCy}`);
+            p.setAttribute('stroke', 'rgba(91,141,239,0.18)');
+            p.setAttribute('stroke-width', '1');
+            p.setAttribute('fill', 'none');
+            svg.insertBefore(p, ballEl);
+            pathEls.push(p);
+        });
+    }
+
+    // Animation
+    let cardIdx    = 0;
+    let phase      = 'travel';
+    let phaseStart = null;
+    const TRAVEL_MS = 1600;
+    const PAUSE_MS  = 500;
+
+    function easeInOut(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    function hubGlow() {
+        hubEl.classList.add('hub-glow-active');
+        setTimeout(() => hubEl.classList.remove('hub-glow-active'), 700);
+    }
+
+    function tick(ts) {
+        if (pathEls.length === 0) { requestAnimationFrame(tick); return; }
+
+        if (!phaseStart) phaseStart = ts;
+        const elapsed = ts - phaseStart;
+
+        if (phase === 'travel') {
+            const rawT = Math.min(elapsed / TRAVEL_MS, 1);
+            const t    = easeInOut(rawT);
+            const p    = pathEls[cardIdx];
+            const len  = p.getTotalLength();
+            const pt   = p.getPointAtLength(t * len);
+            ballEl.setAttribute('cx', pt.x);
+            ballEl.setAttribute('cy', pt.y);
+            ballEl.style.display = '';
+
+            if (rawT >= 1) {
+                ballEl.style.display = 'none';
+                hubGlow();
+                phase      = 'pause';
+                phaseStart = ts;
+            }
+        } else {
+            if (elapsed >= PAUSE_MS) {
+                cardIdx    = (cardIdx + 1) % pathEls.length;
+                phase      = 'travel';
+                phaseStart = ts;
+            }
+        }
+
+        requestAnimationFrame(tick);
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { buildLines(); phaseStart = null; cardIdx = 0; phase = 'travel'; }, 250);
+    });
+
+    // Wait for layout paint before measuring
+    setTimeout(() => {
+        buildLines();
+        requestAnimationFrame(tick);
+    }, 350);
 })();
