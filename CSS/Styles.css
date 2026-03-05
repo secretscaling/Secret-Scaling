@@ -1488,7 +1488,7 @@ ul {
     min-height: 140px;
 }
 
-/* 3-column rows — add class="cf7-row" to <p> tags in CF7 editor */
+/* 3-column rows — CF7 inserts <br> between fields, hide them */
 .contact-form .cf7-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1496,14 +1496,41 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Checkbox row */
+.contact-form .cf7-row br {
+    display: none;
+}
+
+/* Single full-width rows */
+.contact-form .wpcf7-form > p:not(.cf7-row) {
+    margin-bottom: 20px;
+}
+
+.contact-form .wpcf7-form > p:not(.cf7-row) br {
+    display: none;
+}
+
+/* Checkbox / acceptance row */
 .contact-form .wpcf7-form .wpcf7-acceptance {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 0.9rem;
     color: var(--text-dark);
-    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+/* The label wrapping checkbox + text */
+.contact-form .wpcf7-form .wpcf7-acceptance .wpcf7-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+}
+
+.contact-form .wpcf7-form .wpcf7-acceptance .wpcf7-list-item-label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.5;
 }
 
 .contact-form .wpcf7-form .wpcf7-acceptance input[type="checkbox"] {
@@ -1515,7 +1542,9 @@ ul {
 }
 
 /* Submit button */
-.contact-form .wpcf7-form input[type="submit"] {
+.contact-form .wpcf7-form input[type="submit"],
+.contact-form .wpcf7-form .wpcf7-submit {
+    display: block;
     width: 100%;
     padding: 16px 36px;
     background: var(--orange);
@@ -1529,9 +1558,11 @@ ul {
     cursor: pointer;
     transition: background var(--transition), transform var(--transition);
     text-transform: uppercase;
+    margin-top: 8px;
 }
 
-.contact-form .wpcf7-form input[type="submit"]:hover {
+.contact-form .wpcf7-form input[type="submit"]:hover,
+.contact-form .wpcf7-form .wpcf7-submit:hover {
     background: #c55a2a;
     transform: translateY(-2px);
 }
