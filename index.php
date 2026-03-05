@@ -48,6 +48,14 @@
         .goog-te-banner-frame,
         .skiptranslate { display: none !important; }
         body { top: 0 !important; }
+
+        @media (max-width: 768px) {
+            #lang-switcher {
+                top: auto;
+                bottom: 90px;
+                right: 16px;
+            }
+        }
     </style>
 </head>
 <body <?php body_class('intro-active'); ?>>
