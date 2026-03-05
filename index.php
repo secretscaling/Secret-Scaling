@@ -49,9 +49,8 @@
 </head>
 <body <?php body_class('intro-active'); ?>>
 
-    <!-- ========== LOADING SCREEN ========== -->
     <div id="loader">
-        <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScaling_Logo-removebg-preview.png" alt="SecretScaling" id="loader-logo">
+        <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" id="loader-logo">
         <div id="loader-bar-wrap">
             <div id="loader-bar"></div>
         </div>
@@ -59,7 +58,6 @@
 
     <div id="google_translate_element" style="position:absolute;visibility:hidden;width:0;height:0;overflow:hidden;"></div>
 
-    <!-- ========== BOTTOM NAV ========== -->
     <nav class="nav" id="nav">
         <div class="nav-bar">
             <a href="#services" class="nav-tab" data-section="services">
@@ -70,9 +68,9 @@
                 <i class="fa-solid fa-folder-open"></i>
                 <span>Projects</span>
             </a>
-            <a href="#pricing" class="nav-tab" data-section="pricing">
-                <i class="fa-solid fa-tag"></i>
-                <span>Pricing</span>
+            <a href="#process" class="nav-tab" data-section="process">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Our Process</span>
             </a>
             <a href="#contact" class="nav-tab nav-tab--cta" data-section="contact">
                 <i class="fa-solid fa-calendar-check"></i>
@@ -85,17 +83,12 @@
         </div>
     </nav>
 
-    <!-- ========== DROPUP MENU ========== -->
     <div class="dropup-overlay" id="dropupOverlay"></div>
     <div class="dropup-menu" id="dropupMenu" aria-hidden="true">
         <div class="dropup-handle"></div>
         <div class="dropup-inner">
             <div class="dropup-brand">
-                <span class="dropup-brand-icon">&#9789;</span>
-                <div>
-                    <div class="dropup-brand-name">SecretScaling</div>
-                    <div class="dropup-brand-sub">EEN AI MARKETINGBUREAU</div>
-                </div>
+                <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingBlack.png" alt="SecretScaling" class="dropup-logo-img">
                 <p class="dropup-tagline">Het AI-systeem dat uw kliniek laat groeien.</p>
             </div>
             <nav class="dropup-links">
@@ -119,16 +112,14 @@
         </div>
     </div>
 
-    <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-light hero-light--corner"></div>
         <div class="hero-light hero-light--text"></div>
         <div class="container hero-content">
             <div class="hero-logo">
-                <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScaling_Logo-removebg-preview.png" alt="SecretScaling" class="hero-logo-img">
+                <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="hero-logo-img">
             </div>
-            <!-- ========== LANGUAGE SWITCHER ========== -->
             <div id="lang-switcher" class="notranslate">
                 <button class="lang-btn active" id="btn-nl" onclick="switchLang('nl')">NL</button>
                 <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
@@ -157,11 +148,11 @@
                 </div>
             </div>
         </div>
+        <a href="#services" class="hero-scroll-hint" aria-label="Scroll down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
     </section>
 
-    <!-- ========== RESPONSIVE SHOWCASE ========== -->
-    <!-- ========== 3 TRANSFORMATIONS ========== -->
-    <!-- ========== SERVICES GRID ========== -->
     <section class="services" id="services">
         <div class="services-headline-wrap">
             <div class="services-headline">
@@ -274,52 +265,65 @@
         </div>
     </section>
 
-    <!-- ========== 3 TRANSFORMATIONS ========== -->
     <section class="transformations" id="transformations">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <h2>De <span>3 Groeiresultaten</span> Die Wij Realiseren</h2>
-                <p>Wij helpen jouw kliniek in iedere fase om de online infrastructuur te optimaliseren — van zichtbaarheid tot een voorspelbare instroom van consultaties.</p>
+            <div class="section-header system-header" data-reveal>
+                <h2>The <span>3 Growth Results</span> We Deliver</h2>
+                <p>We help your clinic at every stage to optimise its online infrastructure — from visibility to a predictable flow of consultations.</p>
             </div>
-            <div class="transformations-grid" data-reveal>
-                <div class="transformation-card">
-                    <div class="transformation-icon">
-                        <i class="fas fa-rotate"></i>
+            <div class="system-cards" data-reveal>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--blue"><i class="fas fa-rotate"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">RESULT 01</span>
+                            <span class="system-badge">Client Flow</span>
+                        </div>
                     </div>
-                    <div class="transformation-arrow">
-                        <span class="transform-from">Onregelmatige Instroom</span>
-                        <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Een Consistente Flow aan Klanten</span>
-                    </div>
-                    <p>Van Meta-advertenties tot een conversiegerichte website bouwen wij een gestructureerd systeem dat bezoekers stap voor stap begeleidt naar een consultatie. Zo ontstaat er een stabiele instroom van nieuwe klanten, week na week.</p>
+                    <h3>A Consistent Flow of Clients</h3>
+                    <p>From Meta ads to a conversion-focused website, we build a structured system that guides visitors step by step towards a consultation — week after week.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Structured conversion system</li>
+                        <li><i class="fas fa-check"></i> Meta & Google ad campaigns</li>
+                        <li><i class="fas fa-check"></i> Predictable weekly client flow</li>
+                    </ul>
                 </div>
-                <div class="transformation-card transformation-card--featured">
-                    <div class="transformation-icon">
-                        <i class="fas fa-medal"></i>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--orange"><i class="fas fa-medal"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">RESULT 02</span>
+                            <span class="system-badge">Positioning</span>
+                        </div>
                     </div>
-                    <div class="transformation-arrow">
-                        <span class="transform-from">'Gewoon Een Andere Kliniek'</span>
-                        <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Een Unieke Positie in Uw Regio</span>
-                    </div>
-                    <p>Wij positioneren jouw kliniek als de premium keuze in jouw regio. Door een sterke merkpositionering, duidelijke communicatie en een professionele online uitstraling kiezen klanten bewust voor jouw kliniek — zonder eerst prijzen te vergelijken.</p>
+                    <h3>A Unique Position in Your Region</h3>
+                    <p>We position your clinic as the premium choice in your region. Through strong brand positioning, clients consciously choose you — without comparing prices first.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Strong brand positioning</li>
+                        <li><i class="fas fa-check"></i> Premium regional presence</li>
+                        <li><i class="fas fa-check"></i> Value-based client attraction</li>
+                    </ul>
                 </div>
-                <div class="transformation-card">
-                    <div class="transformation-icon">
-                        <i class="fas fa-gears"></i>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--green"><i class="fas fa-gears"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">RESULT 03</span>
+                            <span class="system-badge">Scale</span>
+                        </div>
                     </div>
-                    <div class="transformation-arrow">
-                        <span class="transform-from">Chaotische Groei</span>
-                        <i class="fas fa-arrow-right"></i>
-                        <span class="transform-to">Schalen Zonder Overweldiging</span>
-                    </div>
-                    <p>Met slimme systemen, duidelijke workflows en efficiënte leadopvolging creëren wij een infrastructuur die meegroeit met jouw kliniek. Zo kun je verder groeien zonder dat marketing of klantbeheer onoverzichtelijk wordt.</p>
+                    <h3>Scaling Without Overwhelm</h3>
+                    <p>With smart systems, clear workflows and efficient lead follow-up, we create an infrastructure that grows with your clinic — without becoming unmanageable.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Smart lead follow-up systems</li>
+                        <li><i class="fas fa-check"></i> Clear growth workflows</li>
+                        <li><i class="fas fa-check"></i> Scalable infrastructure</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PORTFOLIO SHOWCASE ========== -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="portfolio-header" data-reveal data-from="left">
@@ -522,7 +526,6 @@
         </div>
     </section>
 
-    <!-- ========== PROCESS SECTION ========== -->
     <section class="process-section" id="process">
         <div class="process-sticky">
             <div class="process-header">
@@ -594,7 +597,6 @@
         </div>
     </section>
 
-    <!-- ========== FEATURES BANNER ========== -->
     <section class="support" id="support">
         <div class="container">
             <div class="support-grid" data-reveal>
@@ -626,262 +628,182 @@
         </div>
     </section>
 
-    <!-- ========== ABOUT US ========== -->
-    <section class="about" id="about">
+    <section class="about-combined" id="about">
         <div class="container">
-            <div class="about-grid" data-reveal>
-                <div class="about-text">
-                    <h2>Over <span>Ons Bureau</span></h2>
-                    <p>Ons doel is helder: bedrijven verbinden met klanten die actief op zoek zijn naar hun expertise en oplossingen.</p>
-                    <p>SecretScaling bouwt digitale groeisystemen voor bedrijven die afhankelijk zijn van een constante instroom van klanten. Wij ontwikkelen een online infrastructuur waarin zichtbaarheid, vertrouwen en klantinstroom samenkomen. Het resultaat is een systeem dat bedrijven helpt om op een voorspelbare en duurzame manier te groeien.</p>
+            <div class="about-combined-grid" data-reveal>
+                <!-- Left: Agency intro -->
+                <div class="about-combined-left">
+                    <span class="about-badge">About Our Agency</span>
+                    <h2>A <span>Growth System</span><br>Built For Clinics</h2>
+                    <p>Our goal is clear: connecting businesses with clients who are actively looking for their expertise and solutions.</p>
+                    <p>SecretScaling builds digital growth systems for businesses that depend on a constant flow of clients. We develop an online infrastructure where visibility, trust and client flow come together — resulting in a system that helps you grow in a predictable and sustainable way.</p>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Afbeelding</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-        <!-- ========== OUR SYSTEM (was Story) ========== -->
-        <section class="story" id="story">
-        <div class="container">
-            <div class="story-grid" data-reveal>
-                <div class="story-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Afbeelding</span>
-                    </div>
-                </div>
-                <div class="story-text">
-                    <h2>Ons <span>Systeem</span></h2>
-                    <p>Veel bedrijven investeren in marketing, maar zien geen consistente instroom van klanten. Niet omdat er te weinig aandacht is, maar omdat de stappen tussen zichtbaarheid en klant vaak niet goed op elkaar aansluiten.</p>
-                    <p>Daarom bouwen wij een gestructureerd systeem waarin alles samenwerkt: van zichtbaarheid → website → lead → consultatie → klant. Wij implementeren dit stap voor stap in uw bedrijf en optimaliseren het continu op basis van data en resultaten. Het resultaat is een marketingstructuur die gericht is op een stabiele en voorspelbare instroom van nieuwe klanten.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== ONS SYSTEEM WERKT OP ELK KANAAL ========== -->
-    <section class="showcase" id="showcase">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <h2>Ons Systeem Werkt Met De <span>Tools Die U Al Gebruikt</span></h2>
-                <p>Ons systeem kan eenvoudig worden geïntegreerd met de tools die uw bedrijf al gebruikt. Zo versterken wij uw bestaande online infrastructuur zonder dat u volledig opnieuw hoeft te beginnen. Wij werken onder andere met Shopify, WordPress, Google Ads, Google SEO, Meta advertenties en TikTok advertenties.</p>
-            </div>
-            <div class="devices" data-reveal>
-                <div class="device device--desktop">
-                    <div class="device-frame">
-                        <div class="device-screen">
-                            <div class="placeholder-content">
-                                <div class="placeholder-bar"></div>
-                                <div class="placeholder-text"></div>
-                                <div class="placeholder-text short"></div>
-                                <div class="placeholder-grid">
-                                    <div class="placeholder-box"></div>
-                                    <div class="placeholder-box"></div>
-                                    <div class="placeholder-box"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span>Desktop</span>
-                </div>
-                <div class="device device--tablet">
-                    <div class="device-frame">
-                        <div class="device-screen">
-                            <div class="placeholder-content">
-                                <div class="placeholder-bar"></div>
-                                <div class="placeholder-text"></div>
-                                <div class="placeholder-text short"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <span>Tablet</span>
-                </div>
-                <div class="device device--phone">
-                    <div class="device-frame">
-                        <div class="device-screen">
-                            <div class="placeholder-content">
-                                <div class="placeholder-bar"></div>
-                                <div class="placeholder-text"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <span>Mobiel</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- ========== CLIENT PAIN POINTS (was News) ========== -->
-        <section class="news" id="news">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <h2>Voor <span>Wie Dit Bedoeld Is</span></h2>
-                <p>SecretScaling is gebouwd voor bedrijven die serieus zijn over groei en klaar zijn om structureel meer klanten aan te trekken.</p>
-            </div>
-            <div class="news-grid" data-reveal>
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder small">
+                <!-- Right: Who this is for — icon cards -->
+                <div class="about-combined-right">
+                    <div class="about-icon-card">
+                        <div class="about-icon-wrap about-icon-wrap--blue">
                             <i class="fas fa-users"></i>
                         </div>
+                        <div class="about-icon-body">
+                            <h3>Attract More Clients</h3>
+                            <p>Your marketing must lead to a stable flow of new clients. We build systems that turn online attention into consultations — week after week.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fas fa-check"></i> Meer Klanten Aantrekken</span>
-                        <h3>Uw marketing moet leiden tot een stabiele instroom van nieuwe klanten.</h3>
-                        <p>Wij bouwen de systemen die online aandacht omzetten in consultaties — week na week, voorspelbaar en gestructureerd.</p>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder small">
+                    <div class="about-icon-card">
+                        <div class="about-icon-wrap about-icon-wrap--purple">
                             <i class="fas fa-star"></i>
                         </div>
+                        <div class="about-icon-body">
+                            <h3>Stronger Positioning</h3>
+                            <p>Your business must be clearly differentiated from competitors. Clients should consciously choose your clinic — not because you're the cheapest.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fas fa-check"></i> Sterker Positioneren</span>
-                        <h3>Uw bedrijf moet duidelijk onderscheiden zijn van concurrenten.</h3>
-                        <p>Door jouw unieke waarde strategisch te positioneren zorgen we dat klanten bewust voor jouw kliniek kiezen — niet omdat je de goedkoopste bent.</p>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder small">
+                    <div class="about-icon-card">
+                        <div class="about-icon-wrap about-icon-wrap--green">
                             <i class="fas fa-arrow-trend-up"></i>
                         </div>
+                        <div class="about-icon-body">
+                            <h3>Scale Without Overwhelm</h3>
+                            <p>Your marketing must keep working as your business grows. Smart workflows and efficient systems create an infrastructure that scales with you.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fas fa-check"></i> Schalen</span>
-                        <h3>Uw marketing moet blijven werken terwijl uw bedrijf groeit.</h3>
-                        <p>Met slimme workflows en efficiënte systemen creëren wij een infrastructuur die meegroeit met uw kliniek, zonder dat het onoverzichtelijk wordt.</p>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
-        <!-- ========== PRICING & PACKAGES ========== -->
-        <section class="pricing" id="pricing">
+
+
+        <section class="story" id="story">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <h2>Prijzen <span>&amp; Pakketten</span></h2>
-                <p>Eenvoudige, transparante prijzen voor cosmetische klinieken die serieus zijn over voorspelbare groei. Beide pakketten bevatten onze volledige 60-dagengarantie.</p>
+            <div class="section-header system-header" data-reveal>
+                <h2>Our <span>System</span></h2>
+                <p>Many businesses invest in marketing but don't see a consistent flow of clients. Not because there isn't enough attention — but because the steps between visibility and client often don't connect. That's why we build one structured system where everything works together.</p>
             </div>
-            <div class="pricing-grid" data-reveal>
-
-                <div class="pricing-card pricing-card--popular">
-                    <div class="pricing-badge">Meest Populair</div>
-                    <h3 class="pricing-name">Fully Booked Starter</h3>
-                    <div class="pricing-price">
-                        <span class="pricing-label">Eenmalige setup</span>
-                        <span class="pricing-amount">€1.500 – €2.500</span>
+            <div class="system-cards" data-reveal>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--blue"><i class="fas fa-eye"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">STEP 01</span>
+                            <span class="system-badge">Visibility</span>
+                        </div>
                     </div>
-                    <div class="pricing-price">
-                        <span class="pricing-label">Maandelijks abonnement</span>
-                        <span class="pricing-amount pricing-amount--secondary">€500 – €750<span>/mnd</span></span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Advertentiecampagne opzetten &amp; lanceren</li>
-                        <li><i class="fas fa-check"></i> Lokale targetingstrategie</li>
-                        <li><i class="fas fa-check"></i> Aanbodpositionering &amp; creatief</li>
-                        <li><i class="fas fa-check"></i> Pixel- &amp; conversietracking</li>
-                        <li><i class="fas fa-check"></i> Leadgeneratie lancering</li>
+                    <h3>Get Found Online</h3>
+                    <p>We position your clinic in front of the right audience through SEO, strategic ads, and targeted content.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Search engine optimisation</li>
+                        <li><i class="fas fa-check"></i> Meta & Google advertising</li>
+                        <li><i class="fas fa-check"></i> Content strategy</li>
                     </ul>
-                    <a href="#contact" class="btn btn--orange pricing-cta">Claim Dit Pakket</a>
                 </div>
-
-                <div class="pricing-card">
-                    <h3 class="pricing-name">Authority &amp; Scale</h3>
-                    <div class="pricing-price">
-                        <span class="pricing-label">Eenmalige setup</span>
-                        <span class="pricing-amount">€2.000 – €5.000</span>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--purple"><i class="fas fa-globe"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">STEP 02</span>
+                            <span class="system-badge">Website</span>
+                        </div>
                     </div>
-                    <div class="pricing-price">
-                        <span class="pricing-label">Maandelijks abonnement</span>
-                        <span class="pricing-amount pricing-amount--secondary">€1.000 – €3.500<span>/mnd</span></span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Volledig merkpositioneringssysteem</li>
-                        <li><i class="fas fa-check"></i> Done-for-you contentsysteem</li>
-                        <li><i class="fas fa-check"></i> Consultatieverkoop training</li>
-                        <li><i class="fas fa-check"></i> Leadafhandelingsautomatisering</li>
-                        <li><i class="fas fa-check"></i> Wekelijkse strategiegesprekken</li>
-                        <li><i class="fas fa-check"></i> Groeiroadmap &amp; rapportage</li>
+                    <h3>Convert Visitors</h3>
+                    <p>Your website acts as a 24/7 sales tool — fast, professional, and built to turn interest into consultation requests.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Conversion-optimised design</li>
+                        <li><i class="fas fa-check"></i> Trust-building structure</li>
+                        <li><i class="fas fa-check"></i> Mobile & speed optimised</li>
                     </ul>
-                    <a href="#contact" class="btn btn--navy pricing-cta">Claim Dit Pakket</a>
                 </div>
-
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--green"><i class="fas fa-filter"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">STEP 03</span>
+                            <span class="system-badge">Lead Flow</span>
+                        </div>
+                    </div>
+                    <h3>Capture & Follow Up</h3>
+                    <p>We optimise every touchpoint so leads don't go cold — turning interest into scheduled consultations.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Automated lead follow-up</li>
+                        <li><i class="fas fa-check"></i> CRM integration</li>
+                        <li><i class="fas fa-check"></i> Retargeting sequences</li>
+                    </ul>
+                </div>
+                <div class="system-card">
+                    <div class="system-card-top">
+                        <div class="system-icon system-icon--orange"><i class="fas fa-calendar-check"></i></div>
+                        <div class="system-card-meta">
+                            <span class="system-label">STEP 04</span>
+                            <span class="system-badge">Growth</span>
+                        </div>
+                    </div>
+                    <h3>Scale Predictably</h3>
+                    <p>With clear data and continuous optimisation, we scale what works and build a reliable engine for long-term growth.</p>
+                    <ul class="system-checklist">
+                        <li><i class="fas fa-check"></i> Monthly reporting</li>
+                        <li><i class="fas fa-check"></i> Data-driven optimisation</li>
+                        <li><i class="fas fa-check"></i> Growth roadmap</li>
+                    </ul>
+                </div>
             </div>
-            <p class="pricing-urgency" data-reveal>
-                <i class="fas fa-triangle-exclamation"></i>
-                Nog slechts 9 founding plekken beschikbaar. Prijzen stijgen na afsluiting van de foundingfase.
-            </p>
         </div>
     </section>
 
-        <!-- ========== OUR BLOGS ========== -->
-        <section class="blogs" id="blogs">
-            <div class="container">
-                <div class="blogs-layout">
-                    <div class="blogs-header">
-                        <h2 class="blogs-title">Our <em>blogs.</em></h2>
-                        <a href="#" class="btn btn--outline blogs-see-all">See All</a>
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header system-header" data-reveal>
+                <h2>Works With The <span>Tools You Already Use</span></h2>
+                <p>Our system integrates seamlessly with your existing platforms — strengthening your online infrastructure without starting from scratch.</p>
+            </div>
+            <div class="tools-grid" data-reveal>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--shopify">
+                        <i class="fa-brands fa-shopify"></i>
                     </div>
-                    <div class="blogs-slider-wrapper">
-                        <div class="blogs-nav">
-                            <button class="blogs-btn blogs-btn--prev" id="blogsPrev" aria-label="Vorige">&#8592;</button>
-                            <button class="blogs-btn blogs-btn--next" id="blogsNext" aria-label="Volgende">&#8594;</button>
-                        </div>
-                        <div class="blogs-track" id="blogsTrack">
-                            <article class="blog-card">
-                                <div class="blog-card-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80" alt="Blog afbeelding" class="blog-card-img">                                </div>
-                                <div class="blog-card-body">
-                                    <span class="blog-card-date">March 4, 2026</span>
-                                    <h3 class="blog-card-title">SEO in 2026: Hoe Structuur, Duidelijkheid en Context Meer Betekenen Dan Alleen Zoekwoorden</h3>
-                                    <p class="blog-card-desc">SEO gaat vandaag over begrepen worden, niet alleen geïndexeerd. Leer hoe structuur en context uw zichtbaarheid vergroten.</p>
-                                </div>
-                            </article>
-                            <article class="blog-card">
-                                <div class="blog-card-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" alt="Blog afbeelding" class="blog-card-img">                                </div>
-                                <div class="blog-card-body">
-                                    <span class="blog-card-date">February 24, 2026</span>
-                                    <h3 class="blog-card-title">AI-Marketing voor Klinieken: Waarom Vroeg Adoptors de Markt Domineren</h3>
-                                    <p class="blog-card-desc">Klinieken die nu AI inzetten voor marketing zien significant hogere conversieratio's. Ontdek hoe u dit voordeel benut.</p>
-                                </div>
-                            </article>
-                            <article class="blog-card">
-                                <div class="blog-card-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Blog afbeelding" class="blog-card-img">                                </div>
-                                <div class="blog-card-body">
-                                    <span class="blog-card-date">February 10, 2026</span>
-                                    <h3 class="blog-card-title">5 Redenen Waarom Uw Kliniek Meer Leads Nodig Heeft Dan Alleen Instagram</h3>
-                                    <p class="blog-card-desc">Social media is slechts één stukje van de puzzel. Een diversified leadstrategie zorgt voor consistente boekingen het hele jaar.</p>
-                                </div>
-                            </article>
-                            <article class="blog-card">
-                                <div class="blog-card-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="Blog afbeelding" class="blog-card-img">                                </div>
-                                <div class="blog-card-body">
-                                    <span class="blog-card-date">January 28, 2026</span>
-                                    <h3 class="blog-card-title">Meta Advertenties voor Cosmetische Klinieken: De Strategie Die Werkt in 2026</h3>
-                                    <p class="blog-card-desc">Van doelgroeptargeting tot creatieve formats — alles wat u moet weten om winstgevende Meta-campagnes te draaien.</p>
-                                </div>
-                            </article>
-                        </div>
+                    <h3>Shopify</h3>
+                    <p>E-commerce integration for clinics selling products or booking services online.</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--wordpress">
+                        <i class="fa-brands fa-wordpress"></i>
                     </div>
+                    <h3>WordPress</h3>
+                    <p>Custom clinic websites built on WordPress — fast, secure, and easy to manage.</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--google">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <h3>Google Ads</h3>
+                    <p>Targeted paid search campaigns that put your clinic in front of high-intent clients.</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--seo">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Google SEO</h3>
+                    <p>Long-term organic visibility that drives consistent traffic without ongoing ad spend.</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--meta">
+                        <i class="fa-brands fa-meta"></i>
+                    </div>
+                    <h3>Meta Ads</h3>
+                    <p>Data-driven Facebook & Instagram campaigns that generate a predictable flow of consultations.</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon tool-icon--tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok Ads</h3>
+                    <p>Short-form video ads that build brand awareness and reach a younger, high-growth audience.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ========== BOOK A STRATEGY CALL ========== -->
+
+
         <section class="contact" id="contact">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -895,17 +817,12 @@
     </section>
 
 
-    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="#hero" class="logo logo--light">
-                        <span class="logo-icon">&#9789;</span>
-                        <div class="logo-stack">
-                            <span class="logo-text">SecretScaling</span>
-                            <span class="logo-sub">EEN AI MARKETINGBUREAU</span>
-                        </div>
+                    <a href="#hero" class="footer-logo-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="footer-logo-img">
                     </a>
                     <p>Een AI-marketingbureau dat cosmetische klinieken en med spas helpt voorspelbaar volgeboekt te worden via intelligente, datagedreven klantwervingssystemen.</p>
                     <div class="footer-social">
@@ -918,9 +835,9 @@
                 <div class="footer-col">
                     <h4>Contactgegevens</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> [Uw Stad, Land]</li>
-                        <li><i class="fas fa-phone"></i> [Uw Telefoonnummer]</li>
-                        <li><i class="fas fa-envelope"></i> hello@[uwbureau].com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Netherlands, Purmerend, 1448GJ</li>
+                        <li><i class="fas fa-phone"></i> +31 6 28803732</li>
+                        <li><i class="fas fa-envelope"></i> secretscaling@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Ma - Vr: 8u - 21u</li>
                     </ul>
                 </div>
@@ -936,7 +853,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Kliniek Partners. Alle rechten voorbehouden.</p>
+                <p>&copy; 2026 SecretScaling. Alle rechten voorbehouden.</p>
                 <div class="footer-bottom-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -947,46 +864,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        (function () {
-            const track = document.getElementById('blogsTrack');
-            const prevBtn = document.getElementById('blogsPrev');
-            const nextBtn = document.getElementById('blogsNext');
-            if (!track) return;
-
-            let current = 0;
-
-            function getVisible() {
-                return window.innerWidth <= 600 ? 1 : 2;
-            }
-
-            function getTotal() {
-                return track.children.length;
-            }
-
-            function slide() {
-                const visible = getVisible();
-                const max = Math.max(0, getTotal() - visible);
-                current = Math.min(current, max);
-                const cardWidth = track.children[0].offsetWidth;
-                const gap = 24;
-                track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
-            }
-
-            prevBtn.addEventListener('click', function () {
-                if (current > 0) { current--; slide(); }
-            });
-
-            nextBtn.addEventListener('click', function () {
-                const visible = getVisible();
-                const max = Math.max(0, getTotal() - visible);
-                if (current < max) { current++; slide(); }
-            });
-
-            window.addEventListener('resize', slide);
-        })();
-    </script>
 
   <script>
     (function () {
@@ -1006,7 +883,6 @@
       });
     })();
   </script>
-    <!-- ========== GOOGLE TRANSLATE ========== -->
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -1041,6 +917,10 @@
         })();
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <button id="scroll-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-shuttle-space"></i>
+    </button>
 
 <?php wp_footer(); ?>
 </body>

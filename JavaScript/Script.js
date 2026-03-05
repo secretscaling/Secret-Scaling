@@ -5,52 +5,41 @@
 const rotatingText = document.querySelector('.hero-rotating-text');
 
 if (rotatingText) {
-    const phraseSets = {
-        nl: [
-            'meer hoogwaardige consultaties aan te trekken',
-            'een voorspelbare instroom van klanten te creëren',
-            'meer vertrouwen op te bouwen bij potentiële klanten',
-            'meer consultaties om te zetten in behandelingen',
-            'schalen en gecontroleerd te groeien',
-        ],
-        en: [
-            'attract more high-quality consultations',
-            'create a predictable flow of new clients',
-            'build more trust with potential clients',
-            'convert more consultations into treatments',
-            'grow sustainably and in a controlled way',
-        ]
-    };
+    const phrases = [
+        'attract more high-quality consultations',
+        'create a predictable flow of new clients',
+        'build more trust with potential clients',
+        'convert more consultations into treatments',
+        'grow sustainably and in a controlled way',
+    ];
 
     const TYPE_SPEED    = 72;
     const DELETE_SPEED  = 38;
     const PAUSE_TYPED   = 2000;
     const PAUSE_DELETED = 380;
 
-    var activeLang   = 'nl';
-    var activePhrases = phraseSets['nl'];
-    var phraseIndex  = 0;
-    var charIndex    = phraseSets['nl'][0].length;
-    var isDeleting   = true;
-    var tickTimeout  = null;
+    var phraseIndex = 0;
+    var charIndex   = phrases[0].length;
+    var isDeleting  = true;
+    var tickTimeout = null;
 
     function tick() {
-        var phrase = activePhrases[phraseIndex];
+        var phrase = phrases[phraseIndex];
 
         if (isDeleting) {
             charIndex--;
             rotatingText.textContent = phrase.substring(0, charIndex);
             if (charIndex === 0) {
                 isDeleting  = false;
-                phraseIndex = (phraseIndex + 1) % activePhrases.length;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
                 tickTimeout = setTimeout(tick, PAUSE_DELETED);
                 return;
             }
             tickTimeout = setTimeout(tick, DELETE_SPEED);
         } else {
             charIndex++;
-            rotatingText.textContent = activePhrases[phraseIndex].substring(0, charIndex);
-            if (charIndex === activePhrases[phraseIndex].length) {
+            rotatingText.textContent = phrases[phraseIndex].substring(0, charIndex);
+            if (charIndex === phrases[phraseIndex].length) {
                 isDeleting  = true;
                 tickTimeout = setTimeout(tick, PAUSE_TYPED);
                 return;
@@ -59,23 +48,7 @@ if (rotatingText) {
         }
     }
 
-    // Expose language switcher for inline switchLang() calls
-    window.setTypewriterLang = function (lang) {
-        activeLang    = lang;
-        activePhrases = phraseSets[lang] || phraseSets['nl'];
-        clearTimeout(tickTimeout);
-        phraseIndex = 0;
-        charIndex   = 0;
-        isDeleting  = false;
-        rotatingText.textContent = '';
-        // Short delay lets Google Translate finish its DOM changes first
-        tickTimeout = setTimeout(tick, 150);
-    };
-
-    // Start
     tickTimeout = setTimeout(tick, PAUSE_TYPED);
-
-
 }
 
 // ============================
@@ -389,6 +362,72 @@ revealElements.forEach(el => revealObserver.observe(el));
 })();
 
 // ============================
+// ABOUT-COMBINED SPARKLES
+// ============================
+
+(function () {
+    const section = document.getElementById('about');
+    if (!section) return;
+    const container = document.createElement('div');
+    container.className = 'about-sparkles';
+    section.prepend(container);
+    const COUNT = 35;
+    for (let i = 0; i < COUNT; i++) {
+        const s = document.createElement('span');
+        s.className = 'sparkle';
+        const size  = Math.random() * 2.5 + 1;
+        const delay = (Math.random() * 8).toFixed(2);
+        const dur   = (Math.random() * 4 + 4).toFixed(2);
+        s.style.cssText = `left:${(Math.random()*100).toFixed(2)}%;top:${(Math.random()*100).toFixed(2)}%;width:${size.toFixed(1)}px;height:${size.toFixed(1)}px;animation-delay:${delay}s;animation-duration:${dur}s;`;
+        container.appendChild(s);
+    }
+})();
+
+// ============================
+// TRANSFORMATIONS SPARKLES
+// ============================
+
+(function () {
+    const section = document.querySelector('.transformations');
+    if (!section) return;
+    const container = document.createElement('div');
+    container.className = 'transformations-sparkles';
+    section.prepend(container);
+    const COUNT = 30;
+    for (let i = 0; i < COUNT; i++) {
+        const s = document.createElement('span');
+        s.className = 'sparkle';
+        const size  = Math.random() * 2.5 + 1;
+        const delay = (Math.random() * 7).toFixed(2);
+        const dur   = (Math.random() * 4 + 3).toFixed(2);
+        s.style.cssText = `left:${(Math.random()*100).toFixed(2)}%;top:${(Math.random()*100).toFixed(2)}%;width:${size.toFixed(1)}px;height:${size.toFixed(1)}px;animation-delay:${delay}s;animation-duration:${dur}s;`;
+        container.appendChild(s);
+    }
+})();
+
+// ============================
+// STORY (OUR SYSTEM) SPARKLES
+// ============================
+
+(function () {
+    const section = document.getElementById('story');
+    if (!section) return;
+    const container = document.createElement('div');
+    container.className = 'story-sparkles';
+    section.prepend(container);
+    const COUNT = 30;
+    for (let i = 0; i < COUNT; i++) {
+        const s = document.createElement('span');
+        s.className = 'sparkle';
+        const size  = Math.random() * 2.5 + 1;
+        const delay = (Math.random() * 7).toFixed(2);
+        const dur   = (Math.random() * 4 + 3).toFixed(2);
+        s.style.cssText = `left:${(Math.random()*100).toFixed(2)}%;top:${(Math.random()*100).toFixed(2)}%;width:${size.toFixed(1)}px;height:${size.toFixed(1)}px;animation-delay:${delay}s;animation-duration:${dur}s;`;
+        container.appendChild(s);
+    }
+})();
+
+// ============================
 // FORM SUBMIT HANDLING
 // ============================
 
@@ -433,24 +472,13 @@ if (quickForm) handleFormSubmit(quickForm);
     const steps     = track.querySelectorAll('.process-step');
     const stepCount = steps.length;
 
-    function isMobile() {
-        return window.innerWidth <= 768;
-    }
-
     function setup() {
-        if (isMobile()) {
-            section.style.height = '';
-            track.style.transform = '';
-            return;
-        }
         // Section height = viewport height + total horizontal distance to travel
         const scrollDistance = (stepCount - 1) * window.innerWidth;
         section.style.height = (window.innerHeight + scrollDistance) + 'px';
     }
 
     function onScroll() {
-        if (isMobile()) return;
-
         const scrollDistance = (stepCount - 1) * window.innerWidth;
         const sectionTop     = section.getBoundingClientRect().top + window.scrollY;
         const raw            = window.scrollY - sectionTop;
@@ -608,4 +636,41 @@ if (quickForm) handleFormSubmit(quickForm);
         buildLines();
         requestAnimationFrame(tick);
     }, 350);
+})();
+
+// ============================
+// SCROLL TO TOP — SHUTTLE
+// ============================
+(function () {
+    const btn = document.getElementById('scroll-top-btn');
+    const hero = document.getElementById('hero');
+    if (!btn || !hero) return;
+
+    function onScroll() {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        if (heroBottom < 0) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    btn.addEventListener('click', function () {
+        if (btn.classList.contains('launching')) return;
+
+        btn.classList.add('launching');
+
+        // Start scrolling when the shuttle begins lifting off
+        setTimeout(function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 180);
+
+        // Reset button after animation completes
+        setTimeout(function () {
+            btn.classList.remove('launching');
+            btn.classList.remove('visible');
+        }, 1050);
+    });
 })();
