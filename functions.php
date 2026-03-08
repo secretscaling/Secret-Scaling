@@ -5,7 +5,7 @@
 
 function secretscaling_enqueue_assets() {
     $uri = get_template_directory_uri();
-    $ver = '1.0';
+    $ver = '2.0';
 
     // Google Fonts
     wp_enqueue_style(
