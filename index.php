@@ -11,42 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <?php wp_head(); ?>
-    <style>
-        #lang-switcher {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(17, 29, 53, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(91, 141, 239, 0.25);
-            border-radius: 100px;
-            padding: 4px;
-            gap: 2px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            margin-bottom: 24px;
-        }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: rgba(255,255,255,0.45);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            padding: 6px 14px;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-        .lang-btn:hover { color: rgba(255,255,255,0.8); }
-        .lang-btn.active {
-            background: #E8734A;
-            color: #ffffff;
-            box-shadow: 0 2px 10px rgba(232,115,74,0.4);
-        }
-        .goog-te-banner-frame,
-        .skiptranslate { display: none !important; }
-        body { top: 0 !important; }
-    </style>
 </head>
 <body <?php body_class('intro-active'); ?>>
 
@@ -56,8 +20,6 @@
             <div id="loader-bar"></div>
         </div>
     </div>
-
-    <div id="google_translate_element" style="position:absolute;visibility:hidden;width:0;height:0;overflow:hidden;"></div>
 
     <nav class="nav" id="nav">
         <div class="nav-bar">
@@ -90,24 +52,24 @@
         <div class="dropup-inner">
             <div class="dropup-brand">
                 <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingBlack.png" alt="SecretScaling" class="dropup-logo-img">
-                <p class="dropup-tagline">Het AI-systeem dat uw kliniek laat groeien.</p>
+                <p class="dropup-tagline">The AI system that grows your clinic.</p>
             </div>
             <nav class="dropup-links">
                 <a href="#hero" class="dropup-link">
                     <span class="dropup-link-title">Home</span>
-                    <span class="dropup-link-sub">Terug naar het begin</span>
+                    <span class="dropup-link-sub">Back to the top</span>
                 </a>
                 <a href="#process" class="dropup-link">
-                    <span class="dropup-link-title">Proces</span>
-                    <span class="dropup-link-sub">Hoe wij werken</span>
+                    <span class="dropup-link-title">Process</span>
+                    <span class="dropup-link-sub">How we work</span>
                 </a>
                 <a href="#about" class="dropup-link">
-                    <span class="dropup-link-title">Over Ons</span>
-                    <span class="dropup-link-sub">Wie wij zijn</span>
+                    <span class="dropup-link-title">About Us</span>
+                    <span class="dropup-link-sub">Who we are</span>
                 </a>
                 <a href="#contact" class="dropup-link">
                     <span class="dropup-link-title">Contact</span>
-                    <span class="dropup-link-sub">Start uw groeisysteem</span>
+                    <span class="dropup-link-sub">Start your growth system</span>
                 </a>
             </nav>
         </div>
@@ -121,31 +83,27 @@
             <div class="hero-logo">
                 <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="hero-logo-img">
             </div>
-            <div id="lang-switcher" class="notranslate">
-                <button class="lang-btn active" id="btn-nl" onclick="switchLang('nl')">NL</button>
-                <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
-            </div>
             <h1 class="hero-title">
-                <span class="hero-title-prefix">Een groeisysteem voor klinieken dat helpt om</span>
-                <span class="hero-rotating-text notranslate" translate="no">schalen en gecontroleerd te groeien</span>
+                <span class="hero-title-prefix">A growth system for clinics that helps you</span>
+                <span class="hero-rotating-text">scale and grow in a controlled way</span>
             </h1>
-            <p class="hero-subtitle">Een voorspelbare instroom van nieuwe patiënten voor uw kliniek. Wij bouwen de systemen die online aandacht omzetten in consultaties.</p>
+            <p class="hero-subtitle">A predictable flow of new patients for your clinic. We build the systems that turn online attention into consultations.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn btn--orange">Vraag een Offerte</a>
-                <a href="#contact" class="btn btn--ghost">Plan een Gesprek</a>
+                <a href="#contact" class="btn btn--orange">Request a Quote</a>
+                <a href="#contact" class="btn btn--ghost">Book a Call</a>
             </div>
             <div class="hero-badges">
                 <div class="badge">
                     <i class="fas fa-shield-halved"></i>
-                    <span>60-Dagen Garantie</span>
+                    <span>60-Day Guarantee</span>
                 </div>
                 <div class="badge">
                     <i class="fas fa-fire"></i>
-                    <span>10 Founding Plekken</span>
+                    <span>10 Founding Spots</span>
                 </div>
                 <div class="badge">
                     <i class="fas fa-gears"></i>
-                    <span>Done-For-You Systeem</span>
+                    <span>Done-For-You System</span>
                 </div>
             </div>
         </div>
@@ -157,57 +115,57 @@
     <section class="services" id="services">
         <div class="services-headline-wrap">
             <div class="services-headline">
-                <span class="services-headline-word active">PRODUCTEN</span>
+                <span class="services-headline-word active">PRODUCTS</span>
                 <span class="services-headline-word">SERVICES</span>
-                <span class="services-headline-word">PROJECTEN</span>
+                <span class="services-headline-word">PROJECTS</span>
             </div>
         </div>
         <div class="services-hub-section">
             <div class="container">
-                <p class="services-hub-subtitle">Elk onderdeel versterkt het volgende — samen vormen ze één geïntegreerd systeem dat uw kliniek laat groeien.</p>
+                <p class="services-hub-subtitle">Each component strengthens the next — together they form one integrated system that grows your clinic.</p>
                 <div class="services-hub-grid">
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
-                        <h3 class="service-card-name">KLANTENWERVING</h3>
-                        <p class="service-card-desc">De manier waarop klanten jouw kliniek ervaren begint lang vóór het eerste consult. Door alle contactmomenten binnen de klantreis strategisch te verbeteren, zorgen we voor een sterkere eerste indruk, meer vertrouwen en een stabielere instroom van kwalitatieve consultaties.</p>
+                        <h3 class="service-card-name">CLIENT ACQUISITION</h3>
+                        <p class="service-card-desc">The way clients experience your clinic begins long before the first consultation. By strategically improving every touchpoint in the customer journey, we create a stronger first impression, more trust, and a more consistent flow of quality consultations.</p>
                         <div class="service-card-tags">
-                            <span class="service-tag">META ADVERTENTIES</span>
-                            <span class="service-tag">LEADGENERATIE</span>
-                            <span class="service-tag">AANBODPOSITIONERING</span>
+                            <span class="service-tag">META ADS</span>
+                            <span class="service-tag">LEAD GENERATION</span>
+                            <span class="service-tag">OFFER POSITIONING</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-star"></i></div>
-                        <h3 class="service-card-name">MERKPOSITIONERING</h3>
-                        <p class="service-card-desc">Een sterke merkpositionering zorgt ervoor dat jouw kliniek niet alleen zichtbaar is, maar ook onthouden wordt. Door jouw unieke waarde duidelijker te positioneren, creëren we een consistente en geloofwaardige indruk die vertrouwen opbouwt en de juiste doelgroep aantrekt.</p>
+                        <h3 class="service-card-name">BRAND POSITIONING</h3>
+                        <p class="service-card-desc">Strong brand positioning ensures your clinic is not only visible, but remembered. By communicating your unique value more clearly, we create a consistent and credible impression that builds trust and attracts the right audience.</p>
                         <div class="service-card-tags">
-                            <span class="service-tag">MERKSTRATEGIE</span>
-                            <span class="service-tag">AUTORITEITSOPBOUW</span>
-                            <span class="service-tag">POSITIONERING</span>
+                            <span class="service-tag">BRAND STRATEGY</span>
+                            <span class="service-tag">AUTHORITY BUILDING</span>
+                            <span class="service-tag">POSITIONING</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-camera"></i></div>
                         <h3 class="service-card-name">SOCIAL MEDIA &amp; CONTENT</h3>
-                        <p class="service-card-desc">Door strategische content te creëren die past bij de identiteit van jouw kliniek, vergroten we niet alleen de zichtbaarheid, maar bouwen we ook vertrouwen en geloofwaardigheid op — waardoor social media een natuurlijke brug wordt tussen interesse en consultatie.</p>
+                        <p class="service-card-desc">By creating strategic content that fits the identity of your clinic, we not only increase visibility but also build trust and credibility — making social media a natural bridge between interest and consultation.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">INSTAGRAM CONTENT</span>
-                            <span class="service-tag">CONTENTSTRATEGIE</span>
-                            <span class="service-tag">POSTING SYSTEEM</span>
+                            <span class="service-tag">CONTENT STRATEGY</span>
+                            <span class="service-tag">POSTING SYSTEM</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3 class="service-card-name">WEB DESIGN &amp; SEO</h3>
-                        <p class="service-card-desc">Jouw website vormt het fundament van de online klantreis. We ontwikkelen een snelle, veilige en strategisch opgebouwde website die de merkidentiteit versterkt, de gebruikerservaring verbetert en via SEO zorgt voor langdurige online zichtbaarheid en groei.</p>
+                        <p class="service-card-desc">Your website is the foundation of the online customer journey. We develop a fast, secure and strategically built website that strengthens brand identity, improves user experience and drives long-term online visibility and growth through SEO.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">SINGLE SCROLL SITE</span>
-                            <span class="service-tag">LANDINGSPAGINA</span>
-                            <span class="service-tag">CONVERSIEOPTIMALISATIE</span>
+                            <span class="service-tag">LANDING PAGE</span>
+                            <span class="service-tag">CONVERSION OPTIMISATION</span>
                         </div>
                     </div>
 
@@ -219,45 +177,45 @@
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-comments"></i></div>
-                        <h3 class="service-card-name">LEADOPVOLGING</h3>
-                        <p class="service-card-desc">Veel groei gaat verloren in de fase tussen interesse en beslissing. Door het opvolgproces strategisch te optimaliseren zorgen we dat leads niet verwateren, sneller converteren en met meer vertrouwen kiezen voor jouw kliniek.</p>
+                        <h3 class="service-card-name">LEAD FOLLOW-UP</h3>
+                        <p class="service-card-desc">Much growth is lost in the phase between interest and decision. By strategically optimising the follow-up process, we ensure leads don't go cold, convert faster, and choose your clinic with more confidence.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">DM SCRIPTS</span>
-                            <span class="service-tag">LEAD KWALIFICATIE</span>
+                            <span class="service-tag">LEAD QUALIFICATION</span>
                             <span class="service-tag">FOLLOW-UP FLOWS</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-rectangle-ad"></i></div>
-                        <h3 class="service-card-name">META ADVERTENTIES</h3>
-                        <p class="service-card-desc">We zetten Meta advertenties strategisch in om een voorspelbare en stabiele instroom van consultaties te creëren. Door data-gedreven optimalisatie zorgen we voor gecontroleerde groei zonder onnodige verspilling.</p>
+                        <h3 class="service-card-name">META ADS</h3>
+                        <p class="service-card-desc">We strategically deploy Meta ads to create a predictable and stable flow of consultations. Through data-driven optimisation, we ensure controlled growth without unnecessary waste.</p>
                         <div class="service-card-tags">
-                            <span class="service-tag">CAMPAGNE OPZET</span>
+                            <span class="service-tag">CAMPAIGN SETUP</span>
                             <span class="service-tag">PIXEL TRACKING</span>
-                            <span class="service-tag">OPTIMALISATIE</span>
+                            <span class="service-tag">OPTIMISATION</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3 class="service-card-name">GROEI &amp; ANALYSE</h3>
-                        <p class="service-card-desc">We optimaliseren elke stap van de klantreis — van eerste zichtbaarheid tot consultatie en opvolging — zodat jouw kliniek structureel meer kwalitatieve klanten aantrekt en duurzaam groeit.</p>
+                        <h3 class="service-card-name">GROWTH &amp; ANALYTICS</h3>
+                        <p class="service-card-desc">We optimise every step of the customer journey — from first visibility to consultation and follow-up — so your clinic structurally attracts more quality clients and grows sustainably.</p>
                         <div class="service-card-tags">
-                            <span class="service-tag">MAANDRAPPORTAGE</span>
+                            <span class="service-tag">MONTHLY REPORTING</span>
                             <span class="service-tag">STRATEGIE CALLS</span>
-                            <span class="service-tag">GROEIROADMAP</span>
+                            <span class="service-tag">GROWTH ROADMAP</span>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-square-poll-vertical"></i></div>
-                        <h3 class="service-card-name">RAPPORTAGE</h3>
-                        <p class="service-card-desc">Met duidelijke maandelijkse rapporten krijg je volledig inzicht in de prestaties van jouw marketing: campagneresultaten, websiteverkeer, consultatie-aanvragen en groei-inzichten. Zo werken we niet alleen als uitvoerder, maar als strategische partner in jouw groei.</p>
+                        <h3 class="service-card-name">REPORTING</h3>
+                        <p class="service-card-desc">With clear monthly reports, you get full insight into the performance of your marketing: campaign results, website traffic, consultation requests and growth insights. This way we act not just as an executor, but as a strategic partner in your growth.</p>
                         <div class="service-card-tags">
-                            <span class="service-tag">MAANDELIJKS RAPPORT</span>
-                            <span class="service-tag">ROI INZICHT</span>
-                            <span class="service-tag">PRESTATIE OVERZICHT</span>
+                            <span class="service-tag">MONTHLY REPORT</span>
+                            <span class="service-tag">ROI INSIGHT</span>
+                            <span class="service-tag">PERFORMANCE OVERVIEW</span>
                         </div>
                     </div>
 
@@ -328,9 +286,9 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="portfolio-header" data-reveal data-from="left">
-                <span class="portfolio-label">ONS WERK</span>
-                <h2 class="portfolio-title">Websites Die <span>Converteren</span></h2>
-                <p class="portfolio-subtitle">Elke site die wij bouwen is ontworpen met één doel: bezoekers omzetten in boekingen.</p>
+                <span class="portfolio-label">OUR WORK</span>
+                <h2 class="portfolio-title">Websites That <span>Convert</span></h2>
+                <p class="portfolio-subtitle">Every site we build is designed with one goal: turning visitors into bookings.</p>
             </div>
         </div>
 
@@ -356,13 +314,13 @@
                         </div>
                         <div class="portfolio-slide-info">
                             <span class="portfolio-slide-num">01 / 05</span>
-                            <span class="portfolio-category">COSMETISCHE KLINIEK</span>
+                            <span class="portfolio-category">COSMETIC CLINIC</span>
                             <h3 class="portfolio-project-name">Kliniek Amsterdam</h3>
-                            <p class="portfolio-project-desc">Volledig herontwerp van de kliniekwebsite met een conversiegerichte structuur. Binnen 60 dagen steeg het consultatieboekingspercentage met 180%.</p>
+                            <p class="portfolio-project-desc">Full redesign of the clinic website with a conversion-focused structure. Within 60 days, the consultation booking rate increased by 180%.</p>
                             <div class="portfolio-slide-tags">
                                 <span>Web Design</span>
-                                <span>Conversieoptimalisatie</span>
-                                <span>UX Strategie</span>
+                                <span>Conversion Optimisation</span>
+                                <span>UX Strategy</span>
                             </div>
                         </div>
                     </div>
@@ -392,11 +350,11 @@
                             <span class="portfolio-slide-num">02 / 05</span>
                             <span class="portfolio-category">MED SPA</span>
                             <h3 class="portfolio-project-name">Med Spa Rotterdam</h3>
-                            <p class="portfolio-project-desc">Premiumpositionering vertaald naar een donker, luxueus webdesign. Gemiddelde orderwaarde steeg met 65% na lancering van de nieuwe site.</p>
+                            <p class="portfolio-project-desc">Premium positioning translated into a dark, luxurious web design. Average order value increased by 65% after the launch of the new site.</p>
                             <div class="portfolio-slide-tags">
-                                <span>Luxe Branding</span>
-                                <span>Landingspagina</span>
-                                <span>Merkidentiteit</span>
+                                <span>Luxury Branding</span>
+                                <span>Landing Page</span>
+                                <span>Brand Identity</span>
                             </div>
                         </div>
                     </div>
@@ -424,12 +382,12 @@
                         </div>
                         <div class="portfolio-slide-info">
                             <span class="portfolio-slide-num">03 / 05</span>
-                            <span class="portfolio-category">SCHOONHEIDSSALON</span>
+                            <span class="portfolio-category">BEAUTY SALON</span>
                             <h3 class="portfolio-project-name">Beautycenter Utrecht</h3>
-                            <p class="portfolio-project-desc">Lichte, uitnodigende website die de premium ervaring van de salon weerspiegelt. Online boekingen stegen met 240% in het eerste kwartaal.</p>
+                            <p class="portfolio-project-desc">Light, inviting website reflecting the salon's premium experience. Online bookings increased by 240% in the first quarter.</p>
                             <div class="portfolio-slide-tags">
                                 <span>Clean Design</span>
-                                <span>Boekingssysteem</span>
+                                <span>Booking System</span>
                                 <span>Mobile First</span>
                             </div>
                         </div>
@@ -458,13 +416,13 @@
                         </div>
                         <div class="portfolio-slide-info">
                             <span class="portfolio-slide-num">04 / 05</span>
-                            <span class="portfolio-category">LASERBEHANDELING</span>
+                            <span class="portfolio-category">LASER TREATMENT</span>
                             <h3 class="portfolio-project-name">Laser Kliniek Den Haag</h3>
-                            <p class="portfolio-project-desc">Vertrouwen en expertise centraal in een medisch verantwoord ontwerp. De kliniek rapporteerde een verdubbeling van nieuwe patiënten binnen 90 dagen.</p>
+                            <p class="portfolio-project-desc">Trust and expertise at the centre of a medically responsible design. The clinic reported a doubling of new patients within 90 days.</p>
                             <div class="portfolio-slide-tags">
-                                <span>Medisch Design</span>
-                                <span>Vertrouwensopbouw</span>
-                                <span>SEO Structuur</span>
+                                <span>Medical Design</span>
+                                <span>Trust Building</span>
+                                <span>SEO Structure</span>
                             </div>
                         </div>
                     </div>
@@ -492,13 +450,13 @@
                         </div>
                         <div class="portfolio-slide-info">
                             <span class="portfolio-slide-num">05 / 05</span>
-                            <span class="portfolio-category">ESTHETISCHE PRAKTIJK</span>
+                            <span class="portfolio-category">AESTHETIC PRACTICE</span>
                             <h3 class="portfolio-project-name">Esthetics Antwerp</h3>
-                            <p class="portfolio-project-desc">Belgische esthetische praktijk gepositioneerd als premium merk in de Antwerpse markt. Leadkosten daalden met 55% dankzij gerichte funnelstrategie.</p>
+                            <p class="portfolio-project-desc">Belgian aesthetic practice positioned as a premium brand in the Antwerp market. Lead costs decreased by 55% through a targeted funnel strategy.</p>
                             <div class="portfolio-slide-tags">
                                 <span>Funnel Design</span>
-                                <span>Belgische Markt</span>
-                                <span>Premium Positionering</span>
+                                <span>Belgian Market</span>
+                                <span>Premium Positioning</span>
                             </div>
                         </div>
                     </div>
@@ -508,7 +466,7 @@
         </div><!-- /.portfolio-slider-wrap -->
 
         <div class="portfolio-controls">
-            <button class="portfolio-arrow portfolio-prev" id="portfolioPrev" aria-label="Vorige project">
+            <button class="portfolio-arrow portfolio-prev" id="portfolioPrev" aria-label="Previous project">
                 <i class="fas fa-arrow-left"></i>
             </button>
             <div class="portfolio-dots" id="portfolioDots">
@@ -518,7 +476,7 @@
                 <button class="portfolio-dot" data-index="3"></button>
                 <button class="portfolio-dot" data-index="4"></button>
             </div>
-            <button class="portfolio-arrow portfolio-next" id="portfolioNext" aria-label="Volgend project">
+            <button class="portfolio-arrow portfolio-next" id="portfolioNext" aria-label="Next project">
                 <i class="fas fa-arrow-right"></i>
             </button>
         </div>
@@ -527,8 +485,8 @@
     <section class="process-section" id="process">
         <div class="process-sticky">
             <div class="process-header">
-                <span class="process-label">Hoe Wij Werken</span>
-                <h2>Ons <span>Proces</span></h2>
+                <span class="process-label">How We Work</span>
+                <h2>Our <span>Process</span></h2>
             </div>
             <div class="process-track-wrapper">
                 <div class="process-track">
@@ -539,8 +497,8 @@
                         <div class="process-step-number">01</div>
                         <div class="process-step-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
                         <div class="process-step-content">
-                            <h3>Intake & Analyse</h3>
-                            <p>Wij analyseren uw kliniek, doelgroep en concurrenten om de juiste strategie en positionering te bepalen.</p>
+                            <h3>Intake & Analysis</h3>
+                            <p>We analyse your clinic, target audience and competitors to determine the right strategy and positioning.</p>
                         </div>
                     </div>
 
@@ -548,8 +506,8 @@
                         <div class="process-step-number">02</div>
                         <div class="process-step-icon"><i class="fas fa-bullseye"></i></div>
                         <div class="process-step-content">
-                            <h3>Strategie & Positionering</h3>
-                            <p>Wij bouwen uw unieke marktpositie en leggen het fundament voor een voorspelbaar groeisysteem.</p>
+                            <h3>Strategy & Positioning</h3>
+                            <p>We build your unique market position and lay the foundation for a predictable growth system.</p>
                         </div>
                     </div>
 
@@ -557,8 +515,8 @@
                         <div class="process-step-number">03</div>
                         <div class="process-step-icon"><i class="fas fa-rocket"></i></div>
                         <div class="process-step-content">
-                            <h3>Lancering & Campagnes</h3>
-                            <p>Wij lanceren uw advertenties, landingspagina en leadgeneratiesysteem klaar voor de eerste consultaties.</p>
+                            <h3>Launch & Campaigns</h3>
+                            <p>We launch your ads, landing page and lead generation system ready for the first consultations.</p>
                         </div>
                     </div>
 
@@ -566,8 +524,8 @@
                         <div class="process-step-number">04</div>
                         <div class="process-step-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="process-step-content">
-                            <h3>Optimalisatie & Resultaten</h3>
-                            <p>Wij monitoren en optimaliseren continu om steeds meer hoogwaardige consultaties te genereren.</p>
+                            <h3>Optimisation & Results</h3>
+                            <p>We continuously monitor and optimise to generate an ever-increasing number of high-quality consultations.</p>
                         </div>
                     </div>
 
@@ -575,8 +533,8 @@
                         <div class="process-step-number">05</div>
                         <div class="process-step-icon"><i class="fas fa-arrow-trend-up"></i></div>
                         <div class="process-step-content">
-                            <h3>Groei & Schaalvergroting</h3>
-                            <p>Wij schalen wat werkt en bouwen een voorspelbare instroom van consultaties voor de lange termijn.</p>
+                            <h3>Growth & Scaling</h3>
+                            <p>We scale what works and build a predictable flow of consultations for the long term.</p>
                         </div>
                     </div>
 
@@ -602,26 +560,26 @@
                     <div class="support-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Reactie Binnen 5 Minuten</h3>
-                    <p>Wij reageren op alle klantvragen binnen 5 minuten, 8u–21u. U wacht nooit op ons.</p>
+                    <h3>Response Within 5 Minutes</h3>
+                    <p>We respond to all client enquiries within 5 minutes, 8am–9pm. You never wait on us.</p>
                 </div>
                 <div class="support-item">
                     <div class="support-icon">
                         <i class="fas fa-circle-check"></i>
                     </div>
-                    <h3>Done-For-You Uitvoering</h3>
-                    <p>Wij verzorgen strategie, advertenties, content, funnels en rapportage. U focust op uw kliniek.</p>
+                    <h3>Done-For-You Execution</h3>
+                    <p>We handle strategy, ads, content, funnels and reporting. You focus on your clinic.</p>
                 </div>
                 <div class="support-item">
                     <div class="support-icon">
                         <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3>60-Dagen Resultatengarantie</h3>
-                    <p>Als wij binnen 60 dagen geen gekwalificeerde consultatiekansen genereren, werken wij gratis totdat we dat wel doen.</p>
+                    <h3>60-Day Results Guarantee</h3>
+                    <p>If we don't generate qualified consultation opportunities within 60 days, we work for free until we do.</p>
                 </div>
             </div>
             <div style="text-align:center; margin-top: 48px;" data-reveal>
-                <a href="#contact" class="btn btn--orange">Plan een Gratis Gesprek</a>
+                <a href="#contact" class="btn btn--orange">Book a Free Call</a>
             </div>
         </div>
     </section>
@@ -805,8 +763,8 @@
         <section class="contact" id="contact">
         <div class="container">
             <div class="section-header" data-reveal>
-                <h2>Boek Uw <span>Gratis Strategiegesprek</span></h2>
-                <p>Vertel ons over uw kliniek en wij laten u precies zien hoe wij uw consultatiagenda in de komende 60 dagen vullen.</p>
+                <h2>Book Your <span>Free Strategy Call</span></h2>
+                <p>Tell us about your clinic and we'll show you exactly how we'll fill your consultation schedule in the next 60 days.</p>
             </div>
             <div class="contact-form" data-reveal>
                 <?php echo do_shortcode('[contact-form-7 id="23ca267" title="Book A Call"]'); ?>
@@ -822,7 +780,7 @@
                     <a href="#hero" class="footer-logo-link">
                         <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="footer-logo-img">
                     </a>
-                    <p>Een AI-marketingbureau dat cosmetische klinieken en med spas helpt voorspelbaar volgeboekt te worden via intelligente, datagedreven klantwervingssystemen.</p>
+                    <p>An AI marketing agency that helps clinics and med spas get predictably fully booked through intelligent, data-driven client acquisition systems.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -831,27 +789,27 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Contactgegevens</h4>
+                    <h4>Contact Details</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Netherlands, Purmerend, 1448GJ</li>
                         <li><i class="fas fa-phone"></i> +31 6 28803732</li>
                         <li><i class="fas fa-envelope"></i> secretscaling@gmail.com</li>
-                        <li><i class="fas fa-clock"></i> Ma - Vr: 8u - 21u</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 8am – 9pm</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Belangrijke Links</h4>
+                    <h4>Important Links</h4>
                     <ul>
                         <li><a href="#hero">Home</a></li>
-                        <li><a href="#services">Diensten</a></li>
-                        <li><a href="#about">Over Ons</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacybeleid</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 SecretScaling. Alle rechten voorbehouden.</p>
+                <p>&copy; 2026 SecretScaling. All rights reserved.</p>
                 <div class="footer-bottom-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -862,6 +820,10 @@
             </div>
         </div>
     </footer>
+
+    <button id="scroll-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-shuttle-space"></i>
+    </button>
 
   <script>
     (function () {
@@ -881,44 +843,6 @@
       });
     })();
   </script>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'nl',
-                includedLanguages: 'en',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-
-        function switchLang(lang) {
-            document.getElementById('btn-nl').classList.toggle('active', lang === 'nl');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            if (lang === 'nl') {
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
-                location.reload();
-            } else {
-                if (window.setTypewriterLang) window.setTypewriterLang(lang);
-                var select = document.querySelector('.goog-te-combo');
-                if (select) {
-                    select.value = lang;
-                    select.dispatchEvent(new Event('change'));
-                }
-            }
-        }
-        (function () {
-            var match = document.cookie.match(/googtrans=\/nl\/(\w+)/);
-            if (match && match[1] === 'en') {
-                document.getElementById('btn-nl').classList.remove('active');
-                document.getElementById('btn-en').classList.add('active');
-            }
-        })();
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <button id="scroll-top-btn" aria-label="Back to top">
-        <i class="fa-solid fa-shuttle-space"></i>
-    </button>
 
 <?php wp_footer(); ?>
 </body>
