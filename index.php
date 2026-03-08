@@ -52,16 +52,28 @@
         <div class="dropup-inner">
             <div class="dropup-brand">
                 <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingBlack.png" alt="SecretScaling" class="dropup-logo-img">
-                <p class="dropup-tagline">The AI system that grows your clinic.</p>
+                <p class="dropup-tagline">The AI system that grows your business.</p>
             </div>
             <nav class="dropup-links">
                 <a href="#hero" class="dropup-link">
                     <span class="dropup-link-title">Home</span>
                     <span class="dropup-link-sub">Back to the top</span>
                 </a>
+                <a href="#services" class="dropup-link">
+                    <span class="dropup-link-title">Services</span>
+                    <span class="dropup-link-sub">What we offer</span>
+                </a>
+                <a href="#portfolio" class="dropup-link">
+                    <span class="dropup-link-title">Our Work</span>
+                    <span class="dropup-link-sub">Projects we've built</span>
+                </a>
                 <a href="#process" class="dropup-link">
                     <span class="dropup-link-title">Process</span>
                     <span class="dropup-link-sub">How we work</span>
+                </a>
+                <a href="#support" class="dropup-link">
+                    <span class="dropup-link-title">Why Us</span>
+                    <span class="dropup-link-sub">Our guarantee</span>
                 </a>
                 <a href="#about" class="dropup-link">
                     <span class="dropup-link-title">About Us</span>
@@ -84,10 +96,10 @@
                 <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="hero-logo-img">
             </div>
             <h1 class="hero-title">
-                <span class="hero-title-prefix">A growth system for clinics that helps you</span>
+                <span class="hero-title-prefix">A growth system for businesses that helps you</span>
                 <span class="hero-rotating-text">scale and grow in a controlled way</span>
             </h1>
-            <p class="hero-subtitle">A predictable flow of new patients for your clinic. We build the systems that turn online attention into consultations.</p>
+            <p class="hero-subtitle">A predictable flow of new patients for your business. We build the systems that turn online attention into consultations.</p>
             <div class="hero-ctas">
                 <a href="#contact" class="btn btn--orange">Request a Quote</a>
                 <a href="#contact" class="btn btn--ghost">Book a Call</a>
@@ -122,13 +134,13 @@
         </div>
         <div class="services-hub-section">
             <div class="container">
-                <p class="services-hub-subtitle">Each component strengthens the next — together they form one integrated system that grows your clinic.</p>
+                <p class="services-hub-subtitle">Each component strengthens the next — together they form one integrated system that grows your business.</p>
                 <div class="services-hub-grid">
 
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
                         <h3 class="service-card-name">CLIENT ACQUISITION</h3>
-                        <p class="service-card-desc">The way clients experience your clinic begins long before the first consultation. By strategically improving every touchpoint in the customer journey, we create a stronger first impression, more trust, and a more consistent flow of quality consultations.</p>
+                        <p class="service-card-desc">The way clients experience your business begins long before the first consultation. By strategically improving every touchpoint in the customer journey, we create a stronger first impression, more trust, and a more consistent flow of quality consultations.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">META ADS</span>
                             <span class="service-tag">LEAD GENERATION</span>
@@ -139,7 +151,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-star"></i></div>
                         <h3 class="service-card-name">BRAND POSITIONING</h3>
-                        <p class="service-card-desc">Strong brand positioning ensures your clinic is not only visible, but remembered. By communicating your unique value more clearly, we create a consistent and credible impression that builds trust and attracts the right audience.</p>
+                        <p class="service-card-desc">Strong brand positioning ensures your business is not only visible, but remembered. By communicating your unique value more clearly, we create a consistent and credible impression that builds trust and attracts the right audience.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">BRAND STRATEGY</span>
                             <span class="service-tag">AUTHORITY BUILDING</span>
@@ -150,7 +162,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-camera"></i></div>
                         <h3 class="service-card-name">SOCIAL MEDIA &amp; CONTENT</h3>
-                        <p class="service-card-desc">By creating strategic content that fits the identity of your clinic, we not only increase visibility but also build trust and credibility — making social media a natural bridge between interest and consultation.</p>
+                        <p class="service-card-desc">By creating strategic content that fits the identity of your business, we not only increase visibility but also build trust and credibility — making social media a natural bridge between interest and consultation.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">INSTAGRAM CONTENT</span>
                             <span class="service-tag">CONTENT STRATEGY</span>
@@ -178,7 +190,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-comments"></i></div>
                         <h3 class="service-card-name">LEAD FOLLOW-UP</h3>
-                        <p class="service-card-desc">Much growth is lost in the phase between interest and decision. By strategically optimising the follow-up process, we ensure leads don't go cold, convert faster, and choose your clinic with more confidence.</p>
+                        <p class="service-card-desc">Much growth is lost in the phase between interest and decision. By strategically optimising the follow-up process, we ensure leads don't go cold, convert faster, and choose your business with more confidence.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">DM SCRIPTS</span>
                             <span class="service-tag">LEAD QUALIFICATION</span>
@@ -200,7 +212,7 @@
                     <div class="service-card">
                         <div class="service-card-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
                         <h3 class="service-card-name">GROWTH &amp; ANALYTICS</h3>
-                        <p class="service-card-desc">We optimise every step of the customer journey — from first visibility to consultation and follow-up — so your clinic structurally attracts more quality clients and grows sustainably.</p>
+                        <p class="service-card-desc">We optimise every step of the customer journey — from first visibility to consultation and follow-up — so your business structurally attracts more quality clients and grows sustainably.</p>
                         <div class="service-card-tags">
                             <span class="service-tag">MONTHLY REPORTING</span>
                             <span class="service-tag">STRATEGIE CALLS</span>
@@ -228,7 +240,7 @@
         <div class="container">
             <div class="section-header system-header" data-reveal>
                 <h2>The <span>3 Growth Results</span> We Deliver</h2>
-                <p>We help your clinic at every stage to optimise its online infrastructure — from visibility to a predictable flow of consultations.</p>
+                <p>We help your business at every stage to optimise its online infrastructure — from visibility to a predictable flow of consultations.</p>
             </div>
             <div class="system-cards" data-reveal>
                 <div class="system-card">
@@ -256,7 +268,7 @@
                         </div>
                     </div>
                     <h3>A Unique Position in Your Region</h3>
-                    <p>We position your clinic as the premium choice in your region. Through strong brand positioning, clients consciously choose you — without comparing prices first.</p>
+                    <p>We position your business as the premium choice in your region. Through strong brand positioning, clients consciously choose you — without comparing prices first.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Strong brand positioning</li>
                         <li><i class="fas fa-check"></i> Premium regional presence</li>
@@ -272,7 +284,7 @@
                         </div>
                     </div>
                     <h3>Scaling Without Overwhelm</h3>
-                    <p>With smart systems, clear workflows and efficient lead follow-up, we create an infrastructure that grows with your clinic — without becoming unmanageable.</p>
+                    <p>With smart systems, clear workflows and efficient lead follow-up, we create an infrastructure that grows with your business — without becoming unmanageable.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Smart lead follow-up systems</li>
                         <li><i class="fas fa-check"></i> Clear growth workflows</li>
@@ -314,9 +326,9 @@
                         </div>
                         <div class="portfolio-slide-info">
                             <span class="portfolio-slide-num">01 / 05</span>
-                            <span class="portfolio-category">COSMETIC CLINIC</span>
+                            <span class="portfolio-category">COSMETIC BUSINESS</span>
                             <h3 class="portfolio-project-name">Kliniek Amsterdam</h3>
-                            <p class="portfolio-project-desc">Full redesign of the clinic website with a conversion-focused structure. Within 60 days, the consultation booking rate increased by 180%.</p>
+                            <p class="portfolio-project-desc">Full redesign of the business website with a conversion-focused structure. Within 60 days, the consultation booking rate increased by 180%.</p>
                             <div class="portfolio-slide-tags">
                                 <span>Web Design</span>
                                 <span>Conversion Optimisation</span>
@@ -418,7 +430,7 @@
                             <span class="portfolio-slide-num">04 / 05</span>
                             <span class="portfolio-category">LASER TREATMENT</span>
                             <h3 class="portfolio-project-name">Laser Kliniek Den Haag</h3>
-                            <p class="portfolio-project-desc">Trust and expertise at the centre of a medically responsible design. The clinic reported a doubling of new patients within 90 days.</p>
+                            <p class="portfolio-project-desc">Trust and expertise at the centre of a medically responsible design. The business reported a doubling of new patients within 90 days.</p>
                             <div class="portfolio-slide-tags">
                                 <span>Medical Design</span>
                                 <span>Trust Building</span>
@@ -498,7 +510,7 @@
                         <div class="process-step-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
                         <div class="process-step-content">
                             <h3>Intake & Analysis</h3>
-                            <p>We analyse your clinic, target audience and competitors to determine the right strategy and positioning.</p>
+                            <p>We analyse your business, target audience and competitors to determine the right strategy and positioning.</p>
                         </div>
                     </div>
 
@@ -568,7 +580,7 @@
                         <i class="fas fa-circle-check"></i>
                     </div>
                     <h3>Done-For-You Execution</h3>
-                    <p>We handle strategy, ads, content, funnels and reporting. You focus on your clinic.</p>
+                    <p>We handle strategy, ads, content, funnels and reporting. You focus on your business.</p>
                 </div>
                 <div class="support-item">
                     <div class="support-icon">
@@ -590,7 +602,7 @@
                 <!-- Left: Agency intro -->
                 <div class="about-combined-left">
                     <span class="about-badge">About Our Agency</span>
-                    <h2>A <span>Growth System</span><br>Built For Clinics</h2>
+                    <h2>A <span>Growth System</span><br>Built For Businesses</h2>
                     <p>Our goal is clear: connecting businesses with clients who are actively looking for their expertise and solutions.</p>
                     <p>SecretScaling builds digital growth systems for businesses that depend on a constant flow of clients. We develop an online infrastructure where visibility, trust and client flow come together — resulting in a system that helps you grow in a predictable and sustainable way.</p>
                 </div>
@@ -611,7 +623,7 @@
                         </div>
                         <div class="about-icon-body">
                             <h3>Stronger Positioning</h3>
-                            <p>Your business must be clearly differentiated from competitors. Clients should consciously choose your clinic — not because you're the cheapest.</p>
+                            <p>Your business must be clearly differentiated from competitors. Clients should consciously choose your business — not because you're the cheapest.</p>
                         </div>
                     </div>
                     <div class="about-icon-card">
@@ -646,7 +658,7 @@
                         </div>
                     </div>
                     <h3>Get Found Online</h3>
-                    <p>We position your clinic in front of the right audience through SEO, strategic ads, and targeted content.</p>
+                    <p>We position your business in front of the right audience through SEO, strategic ads, and targeted content.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Search engine optimisation</li>
                         <li><i class="fas fa-check"></i> Meta & Google advertising</li>
@@ -717,21 +729,21 @@
                         <i class="fa-brands fa-shopify"></i>
                     </div>
                     <h3>Shopify</h3>
-                    <p>E-commerce integration for clinics selling products or booking services online.</p>
+                    <p>E-commerce integration for businesses selling products or booking services online.</p>
                 </div>
                 <div class="tool-card">
                     <div class="tool-icon tool-icon--wordpress">
                         <i class="fa-brands fa-wordpress"></i>
                     </div>
                     <h3>WordPress</h3>
-                    <p>Custom clinic websites built on WordPress — fast, secure, and easy to manage.</p>
+                    <p>Custom business websites built on WordPress — fast, secure, and easy to manage.</p>
                 </div>
                 <div class="tool-card">
                     <div class="tool-icon tool-icon--google">
                         <i class="fa-brands fa-google"></i>
                     </div>
                     <h3>Google Ads</h3>
-                    <p>Targeted paid search campaigns that put your clinic in front of high-intent clients.</p>
+                    <p>Targeted paid search campaigns that put your business in front of high-intent clients.</p>
                 </div>
                 <div class="tool-card">
                     <div class="tool-icon tool-icon--seo">
@@ -764,7 +776,7 @@
         <div class="container">
             <div class="section-header" data-reveal>
                 <h2>Book Your <span>Free Strategy Call</span></h2>
-                <p>Tell us about your clinic and we'll show you exactly how we'll fill your consultation schedule in the next 60 days.</p>
+                <p>Tell us about your business and we'll show you exactly how we'll fill your consultation schedule in the next 60 days.</p>
             </div>
             <div class="contact-form" data-reveal>
                 <?php echo do_shortcode('[contact-form-7 id="23ca267" title="Book A Call"]'); ?>
@@ -780,7 +792,7 @@
                     <a href="#hero" class="footer-logo-link">
                         <img src="<?php echo get_template_directory_uri(); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="footer-logo-img">
                     </a>
-                    <p>An AI marketing agency that helps clinics and med spas get predictably fully booked through intelligent, data-driven client acquisition systems.</p>
+                    <p>An AI marketing agency that helps businesses and med spas get predictably fully booked through intelligent, data-driven client acquisition systems.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>

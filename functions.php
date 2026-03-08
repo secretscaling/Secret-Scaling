@@ -37,3 +37,8 @@ function secretscaling_enqueue_assets() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'secretscaling_enqueue_assets' );
+
+function secretscaling_favicon() {
+    echo '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/Images/Logo/Favicon.png">';
+}
+add_action( 'wp_head', 'secretscaling_favicon', 1 );
