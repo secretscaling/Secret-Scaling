@@ -3,6 +3,15 @@
  * SecretScaling Theme Functions
  */
 
+function secretscaling_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'secretscaling_setup' );
+
+add_filter( 'pre_get_document_title', function() {
+    return 'SecretScaling';
+} );
+
 function secretscaling_enqueue_assets() {
     $uri = get_template_directory_uri();
     $ver = '2.0';
