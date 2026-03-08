@@ -239,7 +239,7 @@ revealElements.forEach(el => revealObserver.observe(el));
 
     let current     = 0;
     let autoTimer   = null;
-    const INTERVAL  = 5000;
+    const INTERVAL  = 20000;
 
     function goTo(index) {
         slides[current].classList.remove('is-active');
@@ -271,6 +271,59 @@ revealElements.forEach(el => revealObserver.observe(el));
     // Pause on hover
     track.closest('.portfolio-slider-wrap').addEventListener('mouseenter', () => clearInterval(autoTimer));
     track.closest('.portfolio-slider-wrap').addEventListener('mouseleave', startAuto);
+})();
+
+// Video progress bar with reverse rewind
+(function () {
+    const video = document.getElementById('portfolioVideo');
+    const fill  = document.getElementById('videoProgressFill');
+    if (!video || !fill) return;
+
+    let reversing     = false;
+    let rewindStart   = 0;
+    let rewindElapsed = 0;
+    let lastTs        = null;
+    const REWIND_DUR  = 3; // seconds
+
+    function easeOutQuart(t) {
+        return 1 - Math.pow(1 - t, 4);
+    }
+
+    function updateFill() {
+        if (!video.duration) return;
+        fill.style.width = (video.currentTime / video.duration * 100) + '%';
+    }
+
+    function reverseStep(ts) {
+        if (lastTs === null) lastTs = ts;
+        rewindElapsed += (ts - lastTs) / 1000;
+        lastTs = ts;
+
+        const t = Math.min(rewindElapsed / REWIND_DUR, 1);
+        video.currentTime = rewindStart * (1 - easeOutQuart(t));
+        updateFill();
+
+        if (t < 1) {
+            requestAnimationFrame(reverseStep);
+        } else {
+            video.currentTime = 0;
+            reversing = false;
+            lastTs    = null;
+            video.play();
+        }
+    }
+
+    video.addEventListener('timeupdate', () => {
+        if (!reversing) updateFill();
+    });
+
+    video.addEventListener('ended', () => {
+        reversing     = true;
+        rewindStart   = video.duration;
+        rewindElapsed = 0;
+        lastTs        = null;
+        requestAnimationFrame(reverseStep);
+    });
 })();
 
 // ============================

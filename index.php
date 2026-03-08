@@ -347,13 +347,10 @@
                                 <div class="browser-url">www.kliniekamsterdam.nl</div>
                             </div>
                             <div class="portfolio-browser-screen screen-1">
-                                <div class="mock-nav"></div>
-                                <div class="mock-hero"></div>
-                                <div class="mock-cards">
-                                    <div class="mock-card"></div>
-                                    <div class="mock-card"></div>
-                                    <div class="mock-card"></div>
-                                </div>
+                                <video id="portfolioVideo" autoplay muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+                                    <source src="<?php echo get_template_directory_uri(); ?>/Images/Videos/Website1.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-progress"><div class="video-progress-fill" id="videoProgressFill"></div></div>
                             </div>
                         </div>
                         <div class="portfolio-slide-info">
