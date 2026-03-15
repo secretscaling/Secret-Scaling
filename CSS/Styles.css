@@ -921,6 +921,14 @@ ul {
     padding: 48px 0 80px;
 }
 
+.services-hub-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 12px;
+}
+
 .services-hub-subtitle {
     font-family: var(--font-body);
     font-size: 1rem;
@@ -3803,6 +3811,11 @@ ul {
 .portfolio-slide.is-active .portfolio-slide-info {
     opacity: 1;
     transform: translateX(0);
+}
+
+.portfolio-demo-btn {
+    align-self: flex-start;
+    margin-top: 6px;
 }
 
 .portfolio-slide-num {

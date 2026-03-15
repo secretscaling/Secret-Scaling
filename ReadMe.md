@@ -274,3 +274,39 @@ If you need help customizing or have questions:
 
 Good luck with your business! إن شاء الله (Insha'Allah) 🙏
 Thank you. <3>
+
+
+Here's the full plan:                                                              
+                                                                                   
+  Step 1 — Build the Demo Sites                                                      
+   
+  Create 2-3 standalone HTML/CSS websites (fake businesses, e.g. "Amsterdam Dental   
+  Clinic"). Each one lives in its own folder in your repo, e.g.:
+  /demos/dental-clinic/index.html                                                    
+  /demos/med-spa/index.html                                                          
+
+  Step 2 — Host Them Free on Netlify
+
+  - Drag & drop each folder onto netlify.com/drop — takes 30 seconds
+  - You get a URL like https://dental-clinic-demo.netlify.app
+  - Free, no account needed initially
+
+  Step 3 — Update Your Portfolio Slides
+
+  On each portfolio slide, add a "View Demo →" button that opens the Netlify URL in a
+   new tab. I'd also swap the fake URL in the browser bar (e.g.
+  www.kliniekamsterdam.nl) to something like dental-clinic-demo.netlify.app so it's
+  honest.
+
+  Step 4 — Replace With Real Sites Over Time
+
+  When you land actual clients, swap the demo URL for their real live URL and update
+  the screenshot/video. The portfolio grows naturally.
+
+  ---
+  To get started I'd need from you:
+  1. What industries/niches do you want to target? (so the demos are relevant to your
+   prospects) 
+  2. What style — should demos match the dark/premium aesthetic of your current site,
+   or vary per niche?
+

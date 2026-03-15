@@ -94,12 +94,12 @@
                 <img src="<?php echo esc_url($t); ?>/Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="hero-logo-img">
             </div>
             <h1 class="hero-title">
-                <span class="hero-title-prefix">A growth system for businesses that helps you</span>
-                <span class="hero-rotating-text">scale and grow in a controlled way</span>
+                <span class="hero-title-prefix">Scaling doesn't fail because of marketing.<br>It fails because the systems behind it are broken.</span>
+                <span class="hero-rotating-text">create a predictable client flow</span>
             </h1>
-            <p class="hero-subtitle">A predictable flow of new patients for your business. We build the systems that turn online attention into consultations.</p>
+            <p class="hero-subtitle">Secret Scaling builds the systems, positioning, and digital infrastructure that allow businesses to scale without chaos.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn btn--orange">Request a Quote</a>
+                <a href="#contact" class="btn btn--orange">Build Your Scaling Foundation</a>
                 <a href="#contact" class="btn btn--ghost">Book a Call</a>
             </div>
             <div class="hero-badges">
@@ -132,7 +132,8 @@
         </div>
         <div class="services-hub-section">
             <div class="container">
-                <p class="services-hub-subtitle">Each component strengthens the next — together they form one integrated system that grows your business.</p>
+                <h2 class="services-hub-title">The infrastructure behind predictable growth</h2>
+                <p class="services-hub-subtitle">Most businesses try to scale through marketing alone. We build the entire system that turns visibility into clients.</p>
                 <div class="services-hub-grid">
 
                     <div class="service-card">
@@ -237,8 +238,8 @@
     <section class="transformations" id="transformations">
         <div class="container">
             <div class="section-header system-header" data-reveal>
-                <h2>The <span>3 Growth Results</span> We Deliver</h2>
-                <p>We help your business at every stage to optimise its online infrastructure — from visibility to a predictable flow of consultations.</p>
+                <h2>The <span>3 Outcomes</span> of a Proper Growth System</h2>
+                <p>We help your business at every stage to optimise its online infrastructure — from visibility to a consistent flow of clients.</p>
             </div>
             <div class="system-cards" data-reveal>
                 <div class="system-card">
@@ -250,7 +251,7 @@
                         </div>
                     </div>
                     <h3>A Consistent Flow of Clients</h3>
-                    <p>From Meta ads to a conversion-focused website, we build a structured system that guides visitors step by step towards a consultation — week after week.</p>
+                    <p>We build a structured system that turns visibility into consultations week after week.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Structured conversion system</li>
                         <li><i class="fas fa-check"></i> Meta & Google ad campaigns</li>
@@ -297,6 +298,7 @@
         <div class="container">
             <div class="portfolio-header" data-reveal data-from="left">
                 <span class="portfolio-label">OUR WORK</span>
+                <p class="portfolio-intro-line">Real businesses. Real systems. Real results.</p>
                 <h2 class="portfolio-title">Websites That <span>Convert</span></h2>
                 <p class="portfolio-subtitle">Every site we build is designed with one goal: turning visitors into bookings.</p>
             </div>
@@ -332,6 +334,7 @@
                                 <span>Conversion Optimisation</span>
                                 <span>UX Strategy</span>
                             </div>
+                            <a href="#" target="_blank" class="btn btn--ghost portfolio-demo-btn">View Demo →</a><!-- TODO: replace # with Netlify URL -->
                         </div>
                     </div>
                 </div>
@@ -366,6 +369,7 @@
                                 <span>Landing Page</span>
                                 <span>Brand Identity</span>
                             </div>
+                            <a href="#" target="_blank" class="btn btn--ghost portfolio-demo-btn">View Demo →</a><!-- TODO: replace # with Netlify URL -->
                         </div>
                     </div>
                 </div>
@@ -400,6 +404,7 @@
                                 <span>Booking System</span>
                                 <span>Mobile First</span>
                             </div>
+                            <a href="#" target="_blank" class="btn btn--ghost portfolio-demo-btn">View Demo →</a><!-- TODO: replace # with Netlify URL -->
                         </div>
                     </div>
                 </div>
@@ -434,6 +439,7 @@
                                 <span>Trust Building</span>
                                 <span>SEO Structure</span>
                             </div>
+                            <a href="#" target="_blank" class="btn btn--ghost portfolio-demo-btn">View Demo →</a><!-- TODO: replace # with Netlify URL -->
                         </div>
                     </div>
                 </div>
@@ -468,6 +474,7 @@
                                 <span>Belgian Market</span>
                                 <span>Premium Positioning</span>
                             </div>
+                            <a href="#" target="_blank" class="btn btn--ghost portfolio-demo-btn">View Demo →</a><!-- TODO: replace # with Netlify URL -->
                         </div>
                     </div>
                 </div>
@@ -495,8 +502,8 @@
     <section class="process-section" id="process">
         <div class="process-sticky">
             <div class="process-header">
-                <span class="process-label">How We Work</span>
-                <h2>Our <span>Process</span></h2>
+                <span class="process-label">Our Framework</span>
+                <h2>The Secret Scaling <span>Framework</span></h2>
             </div>
             <div class="process-track-wrapper">
                 <div class="process-track">
@@ -507,7 +514,7 @@
                         <div class="process-step-number">01</div>
                         <div class="process-step-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
                         <div class="process-step-content">
-                            <h3>Intake & Analysis</h3>
+                            <h3>Diagnosis</h3>
                             <p>We analyse your business, target audience and competitors to determine the right strategy and positioning.</p>
                         </div>
                     </div>
@@ -516,7 +523,7 @@
                         <div class="process-step-number">02</div>
                         <div class="process-step-icon"><i class="fas fa-bullseye"></i></div>
                         <div class="process-step-content">
-                            <h3>Strategy & Positioning</h3>
+                            <h3>Positioning</h3>
                             <p>We build your unique market position and lay the foundation for a predictable growth system.</p>
                         </div>
                     </div>
@@ -525,8 +532,8 @@
                         <div class="process-step-number">03</div>
                         <div class="process-step-icon"><i class="fas fa-rocket"></i></div>
                         <div class="process-step-content">
-                            <h3>Launch & Campaigns</h3>
-                            <p>We launch your ads, landing page and lead generation system ready for the first consultations.</p>
+                            <h3>Infrastructure</h3>
+                            <p>We build and launch your website, ads, and lead generation system ready for the first clients.</p>
                         </div>
                     </div>
 
@@ -534,7 +541,7 @@
                         <div class="process-step-number">04</div>
                         <div class="process-step-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="process-step-content">
-                            <h3>Optimisation & Results</h3>
+                            <h3>Activation</h3>
                             <p>We continuously monitor and optimise to generate an ever-increasing number of high-quality consultations.</p>
                         </div>
                     </div>
@@ -543,8 +550,8 @@
                         <div class="process-step-number">05</div>
                         <div class="process-step-icon"><i class="fas fa-arrow-trend-up"></i></div>
                         <div class="process-step-content">
-                            <h3>Growth & Scaling</h3>
-                            <p>We scale what works and build a predictable flow of consultations for the long term.</p>
+                            <h3>Optimization</h3>
+                            <p>We scale what works and build a predictable flow of clients for the long term.</p>
                         </div>
                     </div>
 
@@ -565,27 +572,30 @@
 
     <section class="support" id="support">
         <div class="container">
+            <div class="section-header system-header" data-reveal>
+                <h2>Built For <span>Long-Term Scaling</span></h2>
+            </div>
             <div class="support-grid" data-reveal>
                 <div class="support-item">
                     <div class="support-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Response Within 5 Minutes</h3>
-                    <p>We respond to all client enquiries within 5 minutes, 8am–9pm. You never wait on us.</p>
+                    <h3>Strategic Systems, Not Quick Fixes</h3>
+                    <p>We build infrastructure designed to compound over time — not tactics that fade after 30 days.</p>
                 </div>
                 <div class="support-item">
                     <div class="support-icon">
                         <i class="fas fa-circle-check"></i>
                     </div>
-                    <h3>Done-For-You Execution</h3>
-                    <p>We handle strategy, ads, content, funnels and reporting. You focus on your business.</p>
+                    <h3>Infrastructure Designed for Growth</h3>
+                    <p>Every system we build is architected to handle more clients, more revenue, and more complexity without breaking.</p>
                 </div>
                 <div class="support-item">
                     <div class="support-icon">
                         <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3>60-Day Results Guarantee</h3>
-                    <p>If we don't generate qualified consultation opportunities within 60 days, we work for free until we do.</p>
+                    <h3>Designed to Remove Founder Bottlenecks</h3>
+                    <p>We systematise the growth engine so your business scales without you being the limiting factor.</p>
                 </div>
             </div>
             <div style="text-align:center; margin-top: 48px;" data-reveal>
@@ -600,9 +610,9 @@
                 <!-- Left: Agency intro -->
                 <div class="about-combined-left">
                     <span class="about-badge">About Our Agency</span>
-                    <h2>A <span>Growth System</span><br>Built For Businesses</h2>
-                    <p>Our goal is clear: connecting businesses with clients who are actively looking for their expertise and solutions.</p>
-                    <p>SecretScaling builds digital growth systems for businesses that depend on a constant flow of clients. We develop an online infrastructure where visibility, trust and client flow come together — resulting in a system that helps you grow in a predictable and sustainable way.</p>
+                    <h2>Scaling <span>Infrastructure</span><br>For Modern Businesses</h2>
+                    <p>Most businesses invest in marketing but struggle to scale because the systems behind their growth are weak.</p>
+                    <p>Secret Scaling builds the infrastructure that connects visibility, trust, and client flow into one scalable system.</p>
                 </div>
                 <!-- Right: Who this is for — icon cards -->
                 <div class="about-combined-right">
@@ -643,8 +653,8 @@
         <section class="story" id="story">
         <div class="container">
             <div class="section-header system-header" data-reveal>
-                <h2>Our <span>System</span></h2>
-                <p>Many businesses invest in marketing but don't see a consistent flow of clients. Not because there isn't enough attention — but because the steps between visibility and client often don't connect. That's why we build one structured system where everything works together.</p>
+                <h2>How the Secret Scaling <span>System</span> Works</h2>
+                <p>Scaling only works when every step in the system is connected. That's why we build one structured system where visibility, trust, and client flow work together.</p>
             </div>
             <div class="system-cards" data-reveal>
                 <div class="system-card">
@@ -687,7 +697,7 @@
                             <span class="system-badge">Lead Flow</span>
                         </div>
                     </div>
-                    <h3>Capture & Follow Up</h3>
+                    <h3>Generate Leads</h3>
                     <p>We optimise every touchpoint so leads don't go cold — turning interest into scheduled consultations.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Automated lead follow-up</li>
@@ -703,7 +713,7 @@
                             <span class="system-badge">Growth</span>
                         </div>
                     </div>
-                    <h3>Scale Predictably</h3>
+                    <h3>Scale Growth</h3>
                     <p>With clear data and continuous optimisation, we scale what works and build a reliable engine for long-term growth.</p>
                     <ul class="system-checklist">
                         <li><i class="fas fa-check"></i> Monthly reporting</li>
@@ -718,7 +728,7 @@
     <section class="showcase" id="showcase">
         <div class="container">
             <div class="section-header system-header" data-reveal>
-                <h2>Works With The <span>Tools You Already Use</span></h2>
+                <h2>Built On The <span>Platforms Businesses Already Use</span></h2>
                 <p>Our system integrates seamlessly with your existing platforms — strengthening your online infrastructure without starting from scratch.</p>
             </div>
             <div class="tools-grid" data-reveal>
@@ -773,8 +783,8 @@
         <section class="contact" id="contact">
         <div class="container">
             <div class="section-header" data-reveal>
-                <h2>Book Your <span>Free Strategy Call</span></h2>
-                <p>Tell us about your business and we'll show you exactly how we'll fill your consultation schedule in the next 60 days.</p>
+                <h2>Start With a <span>Scaling Audit</span></h2>
+                <p>Tell us about your business and we'll show you exactly which systems need to be built for predictable growth.</p>
             </div>
             <div class="contact-form" data-reveal>
                 <?php echo do_shortcode('[contact-form-7 id="23ca267" title="Book A Call"]'); ?>
@@ -794,7 +804,7 @@
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/secretscaling/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -802,7 +812,6 @@
                     <h4>Contact Details</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Netherlands, Purmerend, 1448GJ</li>
-                        <li><i class="fas fa-phone"></i> +31 6 28803732</li>
                         <li><i class="fas fa-envelope"></i> secretscaling@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Mon - Fri: 8am – 9pm</li>
                     </ul>

@@ -6,11 +6,11 @@ const rotatingText = document.querySelector('.hero-rotating-text');
 
 if (rotatingText) {
     const phrases = [
-        'attract more high-quality consultations',
-        'create a predictable flow of new clients',
-        'build more trust with potential clients',
-        'close more clients without extra ad spend',
-        'grow sustainably and in a controlled way',
+        'create a predictable client flow',
+        'remove operational bottlenecks',
+        'build scalable growth systems',
+        'turn your website into a revenue engine',
+        'build the infrastructure for scaling',
     ];
 
     const TYPE_SPEED    = 72;
