@@ -318,11 +318,7 @@
                                 <div class="browser-url">www.kliniekamsterdam.nl</div>
                             </div>
                             <div class="portfolio-browser-screen screen-1">
-                                <video id="portfolioVideo" autoplay muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/Images/Videos/Website1.mp4" type="video/mp4">
-                                </video>
-                                <div class="video-progress"><div class="video-progress-fill" id="videoProgressFill"></div></div>
-                                <button class="video-speed-btn" title="Toggle speed">1x</button>
+                                <iframe src="https://www.youtube.com/embed/PCZLLTLcA7E?rel=0&modestbranding=1" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
                             </div>
                         </div>
                         <div class="portfolio-slide-info">
@@ -351,10 +347,7 @@
                                 <div class="browser-url">www.medsparotterdam.nl</div>
                             </div>
                             <div class="portfolio-browser-screen screen-2">
-                                <video autoplay muted playsinline loop style="width:100%;height:100%;object-fit:cover;display:block;">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/Images/Videos/Website2.mp4" type="video/mp4">
-                                </video>
-                                <button class="video-speed-btn" title="Toggle speed">1x</button>
+                                <iframe src="https://www.youtube.com/embed/ndXO9zMCQbg?rel=0&modestbranding=1" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
                             </div>
                         </div>
                         <div class="portfolio-slide-info">
@@ -383,10 +376,7 @@
                                 <div class="browser-url">www.beautyutrecht.nl</div>
                             </div>
                             <div class="portfolio-browser-screen screen-3">
-                                <video autoplay muted playsinline loop style="width:100%;height:100%;object-fit:cover;display:block;">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/Images/Videos/Website3.mp4" type="video/mp4">
-                                </video>
-                                <button class="video-speed-btn" title="Toggle speed">1x</button>
+                                <iframe src="https://www.youtube.com/embed/VZZSlEOfipo?rel=0&modestbranding=1" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
                             </div>
                         </div>
                         <div class="portfolio-slide-info">
@@ -415,10 +405,7 @@
                                 <div class="browser-url">www.laserkliniekdenhaag.nl</div>
                             </div>
                             <div class="portfolio-browser-screen screen-4">
-                                <video autoplay muted playsinline loop style="width:100%;height:100%;object-fit:cover;display:block;">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/Images/Videos/Website4.mp4" type="video/mp4">
-                                </video>
-                                <button class="video-speed-btn" title="Toggle speed">1x</button>
+                                <iframe src="https://www.youtube.com/embed/JQ30udq3tx4?rel=0&modestbranding=1" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block;"></iframe>
                             </div>
                         </div>
                         <div class="portfolio-slide-info">
