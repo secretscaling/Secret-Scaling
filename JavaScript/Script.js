@@ -727,3 +727,24 @@ if (quickForm) handleFormSubmit(quickForm);
         }, 1050);
     });
 })();
+
+// ============================
+// VIDEO SPEED TOGGLE
+// ============================
+(function () {
+    var speeds = [1, 2, 3];
+
+    document.querySelectorAll('.video-speed-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var screen = btn.closest('.portfolio-browser-screen');
+            var video  = screen && screen.querySelector('video');
+            if (!video) return;
+
+            var idx = speeds.indexOf(video.playbackRate);
+            var next = speeds[(idx + 1) % speeds.length];
+            video.playbackRate = next;
+            btn.textContent = next + 'x';
+        });
+    });
+})();

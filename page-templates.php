@@ -14,29 +14,6 @@
 <body <?php body_class( 'templates-page' ); ?>>
 
     <!-- ==============================
-         MARQUEE #1
-    ============================== -->
-    <div class="tpl-marquee tpl-marquee--top" aria-hidden="true">
-        <div class="tpl-marquee-track">
-            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
-            <!-- duplicate for seamless loop -->
-            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
-            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
-        </div>
-    </div>
-
-    <!-- ==============================
          NAV
     ============================== -->
     <nav class="nav" id="nav">
@@ -106,9 +83,8 @@
     ============================== -->
     <section class="tpl-hero">
         <div class="tpl-hero-bg">
-            <div class="tpl-hero-arrows"></div>
-            <div class="tpl-hero-glow tpl-hero-glow--1"></div>
-            <div class="tpl-hero-glow tpl-hero-glow--2"></div>
+            <div class="hero-light hero-light--corner"></div>
+            <div class="hero-light hero-light--text"></div>
         </div>
 
         <div class="container tpl-hero-inner">
@@ -152,6 +128,29 @@
 
         </div>
     </section>
+
+    <!-- ==============================
+         MARQUEE #1
+    ============================== -->
+    <div class="tpl-marquee" aria-hidden="true">
+        <div class="tpl-marquee-track">
+            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+            <!-- duplicate for seamless loop -->
+            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+        </div>
+    </div>
 
     <!-- ==============================
          FILTER BAR
