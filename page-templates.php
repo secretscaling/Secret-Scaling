@@ -14,6 +14,29 @@
 <body <?php body_class( 'templates-page' ); ?>>
 
     <!-- ==============================
+         MARQUEE #1
+    ============================== -->
+    <div class="tpl-marquee tpl-marquee--top" aria-hidden="true">
+        <div class="tpl-marquee-track">
+            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+            <!-- duplicate for seamless loop -->
+            <span class="tpl-marquee-item">Premium Templates <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built to Convert <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">SecretScaling <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">6 Templates Live <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fully Responsive <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+        </div>
+    </div>
+
+    <!-- ==============================
          NAV
     ============================== -->
     <nav class="nav" id="nav">
@@ -79,42 +102,54 @@
     </div>
 
     <!-- ==============================
-         HERO
+         HERO — asymmetric split
     ============================== -->
     <section class="tpl-hero">
         <div class="tpl-hero-bg">
-            <div class="tpl-hero-grid"></div>
+            <div class="tpl-hero-arrows"></div>
             <div class="tpl-hero-glow tpl-hero-glow--1"></div>
             <div class="tpl-hero-glow tpl-hero-glow--2"></div>
         </div>
-        <div class="container tpl-hero-content">
-            <div class="tpl-hero-badge">
-                <span class="tpl-badge-dot"></span>
-                Premium Digital Products
+
+        <div class="container tpl-hero-inner">
+
+            <!-- Top: badge + headline + subtitle -->
+            <div class="tpl-hero-top">
+                <div class="tpl-hero-badge">
+                    <span class="tpl-badge-dot"></span>
+                    Premium Digital Products
+                </div>
+                <h1 class="tpl-hero-title">
+                    Premium Website<br>Templates.
+                </h1>
+                <p class="tpl-hero-subtitle">
+                    Launch a high-performance website in days, not months. Every template is engineered by SecretScaling — clean code, premium design, built for growth.
+                </p>
             </div>
-            <h1 class="tpl-hero-title">
-                Website Templates<br>
-                <span class="tpl-hero-title-accent">Built to Convert.</span>
-            </h1>
-            <p class="tpl-hero-subtitle">
-                Launch a high-performance website in days, not months. Every template is engineered by SecretScaling — clean code, premium design, built for growth.
-            </p>
-            <div class="tpl-hero-stats">
-                <div class="tpl-stat">
-                    <span class="tpl-stat-number">6+</span>
-                    <span class="tpl-stat-label">Premium Templates</span>
+
+            <!-- Bottom: stats left, counter-statement right -->
+            <div class="tpl-hero-bottom">
+                <div class="tpl-hero-stats">
+                    <div class="tpl-stat">
+                        <span class="tpl-stat-number">6+</span>
+                        <span class="tpl-stat-label">Templates</span>
+                    </div>
+                    <div class="tpl-stat-divider"></div>
+                    <div class="tpl-stat">
+                        <span class="tpl-stat-number">100%</span>
+                        <span class="tpl-stat-label">Responsive</span>
+                    </div>
+                    <div class="tpl-stat-divider"></div>
+                    <div class="tpl-stat">
+                        <span class="tpl-stat-number">&#8734;</span>
+                        <span class="tpl-stat-label">License Usage</span>
+                    </div>
                 </div>
-                <div class="tpl-stat-divider"></div>
-                <div class="tpl-stat">
-                    <span class="tpl-stat-number">100%</span>
-                    <span class="tpl-stat-label">Responsive</span>
-                </div>
-                <div class="tpl-stat-divider"></div>
-                <div class="tpl-stat">
-                    <span class="tpl-stat-number">&#8734;</span>
-                    <span class="tpl-stat-label">License Usage</span>
-                </div>
+                <p class="tpl-hero-counter">
+                    Yours in days,<br><em>not months.</em>
+                </p>
             </div>
+
         </div>
     </section>
 
@@ -156,7 +191,10 @@
                         <div class="tpl-card-badge tpl-badge--featured">Featured</div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">Landing Page</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">Landing Page</span>
+                            <span class="tpl-card-num">01</span>
+                        </div>
                         <h3 class="tpl-card-title">Apex</h3>
                         <p class="tpl-card-desc">A bold agency landing page built to command attention and convert visitors into clients from the first scroll.</p>
                         <div class="tpl-card-footer">
@@ -188,7 +226,10 @@
                         <div class="tpl-card-badge tpl-badge--popular">Popular</div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">SaaS / Tech</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">SaaS / Tech</span>
+                            <span class="tpl-card-num">02</span>
+                        </div>
                         <h3 class="tpl-card-title">Nexus</h3>
                         <p class="tpl-card-desc">A sleek SaaS product page designed for tech companies that need to communicate value fast and drive signups.</p>
                         <div class="tpl-card-footer">
@@ -219,7 +260,10 @@
                         </div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">Business</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">Business</span>
+                            <span class="tpl-card-num">03</span>
+                        </div>
                         <h3 class="tpl-card-title">Solaris</h3>
                         <p class="tpl-card-desc">A professional consulting and business site template that projects authority, builds trust, and books more calls.</p>
                         <div class="tpl-card-footer">
@@ -250,7 +294,10 @@
                         </div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">Portfolio</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">Portfolio</span>
+                            <span class="tpl-card-num">04</span>
+                        </div>
                         <h3 class="tpl-card-title">Prism</h3>
                         <p class="tpl-card-desc">A striking portfolio template for creatives and freelancers who want their work to speak louder than words.</p>
                         <div class="tpl-card-footer">
@@ -282,7 +329,10 @@
                         <div class="tpl-card-badge tpl-badge--new">New</div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">E-commerce</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">E-commerce</span>
+                            <span class="tpl-card-num">05</span>
+                        </div>
                         <h3 class="tpl-card-title">Orbit</h3>
                         <p class="tpl-card-desc">A high-converting e-commerce template built around product storytelling, social proof, and frictionless checkout.</p>
                         <div class="tpl-card-footer">
@@ -313,7 +363,10 @@
                         </div>
                     </div>
                     <div class="tpl-card-body">
-                        <div class="tpl-card-meta"><span class="tpl-card-tag">Landing Page</span></div>
+                        <div class="tpl-card-meta">
+                            <span class="tpl-card-tag">Landing Page</span>
+                            <span class="tpl-card-num">06</span>
+                        </div>
                         <h3 class="tpl-card-title">Zephyr</h3>
                         <p class="tpl-card-desc">A clean, minimal landing page template perfect for digital products, courses, and lead generation funnels.</p>
                         <div class="tpl-card-footer">
@@ -335,34 +388,27 @@
     </section>
 
     <!-- ==============================
-         INCLUDES STRIP
+         MARQUEE #2
     ============================== -->
-    <section class="tpl-includes">
-        <div class="container">
-            <div class="tpl-includes-grid">
-                <div class="tpl-include-item">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <span>Fully Responsive</span>
-                </div>
-                <div class="tpl-include-item">
-                    <i class="fa-solid fa-bolt"></i>
-                    <span>Optimised Performance</span>
-                </div>
-                <div class="tpl-include-item">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Clean, Commented Code</span>
-                </div>
-                <div class="tpl-include-item">
-                    <i class="fa-solid fa-infinity"></i>
-                    <span>Lifetime License</span>
-                </div>
-                <div class="tpl-include-item">
-                    <i class="fa-solid fa-headset"></i>
-                    <span>Priority Support</span>
-                </div>
-            </div>
+    <div class="tpl-marquee tpl-marquee--mid" aria-hidden="true">
+        <div class="tpl-marquee-track tpl-marquee-track--reverse">
+            <span class="tpl-marquee-item">Responsive Design <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Commented Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Optimised Performance <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Priority Support <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fast Load Times <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built for Growth <span class="tpl-marquee-sep">&#9679;</span></span>
+            <!-- duplicate -->
+            <span class="tpl-marquee-item">Responsive Design <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Clean Commented Code <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Optimised Performance <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Lifetime License <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Priority Support <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Fast Load Times <span class="tpl-marquee-sep">&#9679;</span></span>
+            <span class="tpl-marquee-item">Built for Growth <span class="tpl-marquee-sep">&#9679;</span></span>
         </div>
-    </section>
+    </div>
 
     <!-- ==============================
          CTA
@@ -406,10 +452,9 @@
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     var idx   = cards.indexOf(entry.target) % 3;
-                    var delay = idx * 120;
                     setTimeout(function () {
                         entry.target.classList.add('tpl-visible');
-                    }, delay);
+                    }, idx * 120);
                     observer.unobserve(entry.target);
                 }
             });
