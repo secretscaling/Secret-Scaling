@@ -273,56 +273,67 @@ revealElements.forEach(el => revealObserver.observe(el));
     track.closest('.portfolio-slider-wrap').addEventListener('mouseleave', startAuto);
 })();
 
-// Video progress bar with reverse rewind
+// ============================
+// YOUTUBE IFRAME PLAYER CONTROLS
+// ============================
 (function () {
-    const video = document.getElementById('portfolioVideo');
-    const fill  = document.getElementById('videoProgressFill');
-    if (!video || !fill) return;
+    var ytPlayers = {};
+    var speeds    = [1, 1.5, 2];
 
-    let reversing     = false;
-    let rewindStart   = 0;
-    let rewindElapsed = 0;
-    let lastTs        = null;
-    const REWIND_DUR  = 3; // seconds
+    // Load the YouTube IFrame API script once
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(tag, firstScript);
 
-    function easeOutQuart(t) {
-        return 1 - Math.pow(1 - t, 4);
-    }
-
-    function updateFill() {
-        if (!video.duration) return;
-        fill.style.width = (video.currentTime / video.duration * 100) + '%';
-    }
-
-    function reverseStep(ts) {
-        if (lastTs === null) lastTs = ts;
-        rewindElapsed += (ts - lastTs) / 1000;
-        lastTs = ts;
-
-        const t = Math.min(rewindElapsed / REWIND_DUR, 1);
-        video.currentTime = rewindStart * (1 - easeOutQuart(t));
-        updateFill();
-
-        if (t < 1) {
-            requestAnimationFrame(reverseStep);
-        } else {
-            video.currentTime = 0;
-            reversing = false;
-            lastTs    = null;
-            video.play();
+    // Called automatically by the API when ready
+    window.onYouTubeIframeAPIReady = function () {
+        for (var i = 1; i <= 4; i++) {
+            (function (num) {
+                var el = document.getElementById('ytPlayer' + num);
+                if (!el) return;
+                ytPlayers[num] = new YT.Player('ytPlayer' + num, {
+                    events: {
+                        onStateChange: function (e) {
+                            var btn = document.querySelector('.yt-pause-btn[data-player="' + num + '"]');
+                            if (!btn) return;
+                            btn.innerHTML = (e.data === YT.PlayerState.PLAYING) ? '&#9646;&#9646;' : '&#9654;';
+                        }
+                    }
+                });
+            })(i);
         }
-    }
+    };
 
-    video.addEventListener('timeupdate', () => {
-        if (!reversing) updateFill();
+    // Pause / play toggle
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.yt-pause-btn');
+        if (!btn) return;
+        e.stopPropagation();
+        var num    = btn.dataset.player;
+        var player = ytPlayers[num];
+        if (!player) return;
+        var state = player.getPlayerState();
+        if (state === YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+        } else {
+            player.playVideo();
+        }
     });
 
-    video.addEventListener('ended', () => {
-        reversing     = true;
-        rewindStart   = video.duration;
-        rewindElapsed = 0;
-        lastTs        = null;
-        requestAnimationFrame(reverseStep);
+    // Speed toggle
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.yt-speed-btn');
+        if (!btn) return;
+        e.stopPropagation();
+        var num    = btn.dataset.player;
+        var player = ytPlayers[num];
+        if (!player) return;
+        var current = player.getPlaybackRate();
+        var idx     = speeds.indexOf(current);
+        var next    = speeds[(idx + 1) % speeds.length];
+        player.setPlaybackRate(next);
+        btn.textContent = next + 'x';
     });
 })();
 
@@ -728,23 +739,3 @@ if (quickForm) handleFormSubmit(quickForm);
     });
 })();
 
-// ============================
-// VIDEO SPEED TOGGLE
-// ============================
-(function () {
-    var speeds = [1, 2, 3];
-
-    document.querySelectorAll('.video-speed-btn').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var screen = btn.closest('.portfolio-browser-screen');
-            var video  = screen && screen.querySelector('video');
-            if (!video) return;
-
-            var idx = speeds.indexOf(video.playbackRate);
-            var next = speeds[(idx + 1) % speeds.length];
-            video.playbackRate = next;
-            btn.textContent = next + 'x';
-        });
-    });
-})();

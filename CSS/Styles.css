@@ -3753,11 +3753,45 @@ ul {
     opacity: 0;
 }
 
-.portfolio-browser-screen:hover .video-speed-btn {
-    opacity: 1;
+/* YouTube custom controls */
+.yt-controls {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
 }
 
-.video-speed-btn:hover {
+.portfolio-browser-screen:hover .yt-controls {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.yt-pause-btn,
+.yt-speed-btn {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.yt-pause-btn:hover,
+.yt-speed-btn:hover {
     background: rgba(91, 141, 239, 0.75);
     border-color: var(--blue);
 }
