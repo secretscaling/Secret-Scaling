@@ -86,6 +86,7 @@
     </div>
 
     <section class="hero" id="hero">
+        <canvas id="waveMesh"></canvas>
         <div class="hero-overlay"></div>
         <div class="hero-light hero-light--corner"></div>
         <div class="hero-light hero-light--text"></div>
