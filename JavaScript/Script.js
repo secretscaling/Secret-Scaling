@@ -2,113 +2,115 @@
 // THREE.JS WAVE MESH — HERO
 // ============================
 (function () {
-    if (typeof THREE === 'undefined') return;
-
     var canvas = document.getElementById('waveMesh');
     if (!canvas) return;
 
-    var scene    = new THREE.Scene();
-    var w        = canvas.offsetWidth  || window.innerWidth;
-    var h        = canvas.offsetHeight || window.innerHeight;
-    var camera   = new THREE.PerspectiveCamera(55, w / h, 0.1, 1000);
-    camera.position.set(0, 55, 120);
-    camera.lookAt(0, 0, 0);
+    function initWave() {
+        var scene    = new THREE.Scene();
+        var w        = canvas.offsetWidth  || window.innerWidth;
+        var h        = canvas.offsetHeight || window.innerHeight;
+        var camera   = new THREE.PerspectiveCamera(55, w / h, 0.1, 1000);
+        camera.position.set(0, 55, 120);
+        camera.lookAt(0, 0, 0);
 
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(w, h);
-    renderer.setClearColor(0x000000, 0);
+        var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(w, h);
+        renderer.setClearColor(0x000000, 0);
 
-    var geometry = new THREE.PlaneGeometry(280, 200, 90, 65);
-    geometry.rotateX(-Math.PI / 2);
+        var geometry = new THREE.PlaneGeometry(280, 200, 90, 65);
+        geometry.rotateX(-Math.PI / 2);
 
-    var material = new THREE.ShaderMaterial({
-        uniforms: {
-            uTime:      { value: 0.0 },
-            uMouse:     { value: new THREE.Vector2(0.0, 0.0) },
-            uAlpha:     { value: 1.0 },
-            uColorLow:  { value: new THREE.Color('#111D35') },
-            uColorMid:  { value: new THREE.Color('#5B8DEF') },
-            uColorHigh: { value: new THREE.Color('#E8734A') },
-        },
-        vertexShader: [
-            'uniform float uTime;',
-            'uniform vec2  uMouse;',
-            'varying float vHeight;',
-            'void main() {',
-            '    vec3 pos = position;',
-            '    float mx = uMouse.x * 0.4;',
-            '    float my = uMouse.y * 0.4;',
-            '    float w1 = sin(pos.x * 0.07 + uTime * 0.50 + mx) * cos(pos.z * 0.06 + uTime * 0.40 + my);',
-            '    float w2 = sin(pos.x * 0.04 - uTime * 0.30) * sin(pos.z * 0.08 + uTime * 0.35 + mx * 0.5);',
-            '    float w3 = cos(pos.x * 0.05 + pos.z * 0.05 + uTime * 0.25);',
-            '    pos.y = w1 * 12.0 + w2 * 8.0 + w3 * 5.0;',
-            '    vHeight = (pos.y + 25.0) / 50.0;',
-            '    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);',
-            '}'
-        ].join('\n'),
-        fragmentShader: [
-            'uniform float uAlpha;',
-            'uniform vec3  uColorLow;',
-            'uniform vec3  uColorMid;',
-            'uniform vec3  uColorHigh;',
-            'varying float vHeight;',
-            'void main() {',
-            '    float h = clamp(vHeight, 0.0, 1.0);',
-            '    vec3 color;',
-            '    if (h < 0.5) {',
-            '        color = mix(uColorLow, uColorMid, h * 2.0);',
-            '    } else {',
-            '        color = mix(uColorMid, uColorHigh, (h - 0.5) * 2.0);',
-            '    }',
-            '    gl_FragColor = vec4(color, uAlpha * 0.5);',
-            '}'
-        ].join('\n'),
-        transparent: true,
-        wireframe:   true,
-    });
+        var material = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime:      { value: 0.0 },
+                uMouse:     { value: new THREE.Vector2(0.0, 0.0) },
+                uAlpha:     { value: 1.0 },
+                uColorLow:  { value: new THREE.Color('#111D35') },
+                uColorMid:  { value: new THREE.Color('#5B8DEF') },
+                uColorHigh: { value: new THREE.Color('#E8734A') },
+            },
+            vertexShader: [
+                'uniform float uTime;',
+                'uniform vec2  uMouse;',
+                'varying float vHeight;',
+                'void main() {',
+                '    vec3 pos = position;',
+                '    float mx = uMouse.x * 0.4;',
+                '    float my = uMouse.y * 0.4;',
+                '    float w1 = sin(pos.x * 0.07 + uTime * 0.50 + mx) * cos(pos.z * 0.06 + uTime * 0.40 + my);',
+                '    float w2 = sin(pos.x * 0.04 - uTime * 0.30) * sin(pos.z * 0.08 + uTime * 0.35 + mx * 0.5);',
+                '    float w3 = cos(pos.x * 0.05 + pos.z * 0.05 + uTime * 0.25);',
+                '    pos.y = w1 * 12.0 + w2 * 8.0 + w3 * 5.0;',
+                '    vHeight = (pos.y + 25.0) / 50.0;',
+                '    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);',
+                '}'
+            ].join('\n'),
+            fragmentShader: [
+                'uniform float uAlpha;',
+                'uniform vec3  uColorLow;',
+                'uniform vec3  uColorMid;',
+                'uniform vec3  uColorHigh;',
+                'varying float vHeight;',
+                'void main() {',
+                '    float h = clamp(vHeight, 0.0, 1.0);',
+                '    vec3 color;',
+                '    if (h < 0.5) {',
+                '        color = mix(uColorLow, uColorMid, h * 2.0);',
+                '    } else {',
+                '        color = mix(uColorMid, uColorHigh, (h - 0.5) * 2.0);',
+                '    }',
+                '    gl_FragColor = vec4(color, uAlpha * 0.5);',
+                '}'
+            ].join('\n'),
+            transparent: true,
+            wireframe:   true,
+        });
 
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.rotation.x = -0.38;
-    scene.add(mesh);
+        var mesh = new THREE.Mesh(geometry, material);
+        mesh.rotation.x = -0.38;
+        scene.add(mesh);
 
-    // Mouse tracking
-    var mouse = { x: 0, y: 0 };
-    document.addEventListener('mousemove', function (e) {
-        mouse.x =  (e.clientX / window.innerWidth)  * 2 - 1;
-        mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-    });
+        var mouse = { x: 0, y: 0 };
+        document.addEventListener('mousemove', function (e) {
+            mouse.x =  (e.clientX / window.innerWidth)  * 2 - 1;
+            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
 
-    // Scroll fade
-    var hero = document.getElementById('hero');
-    window.addEventListener('scroll', function () {
-        if (!hero) return;
-        var rect     = hero.getBoundingClientRect();
-        var progress = Math.max(0, -rect.top / rect.height);
-        material.uniforms.uAlpha.value = Math.max(0, 1 - progress * 2.5);
-    }, { passive: true });
+        var hero = document.getElementById('hero');
+        window.addEventListener('scroll', function () {
+            if (!hero) return;
+            var rect     = hero.getBoundingClientRect();
+            var progress = Math.max(0, -rect.top / rect.height);
+            material.uniforms.uAlpha.value = Math.max(0, 1 - progress * 2.5);
+        }, { passive: true });
 
-    // Resize
-    function onResize() {
-        var nw = canvas.offsetWidth  || window.innerWidth;
-        var nh = canvas.offsetHeight || window.innerHeight;
-        camera.aspect = nw / nh;
-        camera.updateProjectionMatrix();
-        renderer.setSize(nw, nh);
+        window.addEventListener('resize', function () {
+            var nw = canvas.offsetWidth  || window.innerWidth;
+            var nh = canvas.offsetHeight || window.innerHeight;
+            camera.aspect = nw / nh;
+            camera.updateProjectionMatrix();
+            renderer.setSize(nw, nh);
+        });
+
+        var clock = new THREE.Clock();
+        var mu    = material.uniforms;
+        function animate() {
+            requestAnimationFrame(animate);
+            mu.uTime.value = clock.getElapsedTime();
+            mu.uMouse.value.x += (mouse.x - mu.uMouse.value.x) * 0.04;
+            mu.uMouse.value.y += (mouse.y - mu.uMouse.value.y) * 0.04;
+            renderer.render(scene, camera);
+        }
+        animate();
     }
-    window.addEventListener('resize', onResize);
 
-    // Animation loop
-    var clock = new THREE.Clock();
-    var mu    = material.uniforms;
-    function animate() {
-        requestAnimationFrame(animate);
-        mu.uTime.value = clock.getElapsedTime();
-        mu.uMouse.value.x += (mouse.x - mu.uMouse.value.x) * 0.04;
-        mu.uMouse.value.y += (mouse.y - mu.uMouse.value.y) * 0.04;
-        renderer.render(scene, camera);
-    }
-    animate();
+    // Load Three.js dynamically so it never blocks window.load or the loader
+    var tag = document.createElement('script');
+    tag.src = 'https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js';
+    tag.async = true;
+    tag.onload = initWave;
+    document.head.appendChild(tag);
 })();
 
 // ============================

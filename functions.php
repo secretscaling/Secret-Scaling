@@ -38,18 +38,11 @@ function secretscaling_enqueue_assets() {
         $ver
     );
 
-    // Three.js (loaded before main script)
-    wp_enqueue_script(
-        'three-js',
-        'https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js',
-        array(), '0.158.0', true
-    );
-
-    // Main script (loaded in footer)
+    // Main script (loaded in footer — Three.js loaded dynamically inside)
     wp_enqueue_script(
         'secretscaling-script',
         $uri . '/JavaScript/Script.js',
-        array('three-js'), $ver, true
+        array(), $ver, true
     );
 }
 add_action( 'wp_enqueue_scripts', 'secretscaling_enqueue_assets' );
