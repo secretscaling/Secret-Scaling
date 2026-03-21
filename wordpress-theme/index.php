@@ -1,21 +1,19 @@
+<?php $t = get_template_directory_uri(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecretScaling — AI-Driven Growth Marketing Agency</title>
-    <link rel="icon" type="image/png" href="Images/Logo/Favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="CSS/Styles.css">
-
+<?php wp_head(); ?>
 </head>
-<body class="intro-active">
+<body <?php body_class('intro-active'); ?>>
 
     <div id="loader">
-        <img src="Images/Logo/SecretScalingWhite.png" alt="SecretScaling" id="loader-logo">
+        <img src="<?php echo esc_url($t); ?>/images/logo/secret-scaling-white.png" alt="SecretScaling" id="loader-logo">
         <div id="loader-bar-wrap">
             <div id="loader-bar"></div>
         </div>
@@ -51,7 +49,7 @@
         <div class="dropup-handle"></div>
         <div class="dropup-inner">
             <div class="dropup-brand">
-                <img src="Images/Logo/SecretScalingBlack.png" alt="SecretScaling" class="dropup-logo-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo/secret-scaling-black.png" alt="SecretScaling" class="dropup-logo-img">
                 <p class="dropup-tagline">The AI system that grows your business.</p>
             </div>
             <nav class="dropup-links">
@@ -94,7 +92,7 @@
         <div class="hero-light hero-light--text"></div>
         <div class="container hero-content">
             <div class="hero-logo">
-                <img src="Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="hero-logo-img">
+                <img src="<?php echo esc_url($t); ?>/images/logo/secret-scaling-white.png" alt="SecretScaling" class="hero-logo-img">
             </div>
             <h1 class="hero-title">
                 <span class="hero-title-prefix">Scaling doesn't fail because of marketing.<br>It fails because the systems behind it are broken.</span>
@@ -748,42 +746,9 @@
                 <h2>Start With a <span>Scaling Audit</span></h2>
                 <p>Tell us about your business and we'll show you exactly which systems need to be built for predictable growth.</p>
             </div>
-            <form class="contact-form" id="contactForm" data-reveal>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" placeholder="First Name *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Last Name *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address *" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="tel" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Business Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Biggest Challenge">
-                    </div>
-                </div>
-                <div class="form-group full">
-                    <textarea placeholder="Tell us about your business and goals *" rows="6" required></textarea>
-                </div>
-                <div class="form-group full consent">
-                    <label class="checkbox-label">
-                        <input type="checkbox" required>
-                        <span>I agree to the processing of my personal data and accept the privacy policy.</span>
-                    </label>
-                </div>
-                <div class="form-group full">
-                    <button type="submit" class="btn btn--orange btn--large">BOOK MY FREE STRATEGY CALL</button>
-                </div>
-            </form>
+            <div class="contact-form" data-reveal>
+                <?php echo do_shortcode('[contact-form-7 id="23ca267" title="Book A Call"]'); ?>
+            </div>
         </div>
     </section>
 
@@ -793,7 +758,7 @@
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
                     <a href="#hero" class="footer-logo-link">
-                        <img src="Images/Logo/SecretScalingWhite.png" alt="SecretScaling" class="footer-logo-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo/secret-scaling-white.png" alt="SecretScaling" class="footer-logo-img">
                     </a>
                     <p>An AI marketing agency that helps businesses and med spas get predictably fully booked through intelligent, data-driven client acquisition systems.</p>
                     <div class="footer-social">
@@ -839,8 +804,6 @@
         <i class="fa-solid fa-shuttle-space"></i>
     </button>
 
-    <script src="JavaScript/Script.js"></script>
-
   <script>
     (function () {
       window.addEventListener('load', function () {
@@ -860,5 +823,6 @@
     })();
   </script>
 
+<?php wp_footer(); ?>
 </body>
 </html>

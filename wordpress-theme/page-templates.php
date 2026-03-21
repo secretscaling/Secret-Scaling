@@ -46,7 +46,7 @@
         <div class="dropup-handle"></div>
         <div class="dropup-inner">
             <div class="dropup-brand">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/Images/Logo/SecretScalingBlack.png" alt="SecretScaling" class="dropup-logo-img">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo/secret-scaling-black.png" alt="SecretScaling" class="dropup-logo-img">
                 <p class="dropup-tagline">The AI system that grows your business.</p>
             </div>
             <nav class="dropup-links">

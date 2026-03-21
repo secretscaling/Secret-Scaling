@@ -33,7 +33,7 @@ function secretscaling_enqueue_assets() {
     // Main stylesheet
     wp_enqueue_style(
         'secretscaling-style',
-        $uri . '/CSS/Styles.css',
+        $uri . '/css/styles.css',
         array('secretscaling-fonts', 'font-awesome'),
         $ver
     );
@@ -41,7 +41,7 @@ function secretscaling_enqueue_assets() {
     // Main script (loaded in footer — Three.js loaded dynamically inside)
     wp_enqueue_script(
         'secretscaling-script',
-        $uri . '/JavaScript/Script.js',
+        $uri . '/js/script.js',
         array(), $ver, true
     );
 }
